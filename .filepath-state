@@ -11,11 +11,8 @@
   "00f8d7cfb9fbdf0f9d67f239aff5575dcdaaaed0": [
     "virtualization\\hyperv_on_windows\\about\\media\\ProductionCheckpoints.png"
   ],
-  "38df431021a76e5ed8464a7b6c30a23ddb2497f7": [
-    "virtualization\\hyperv_on_windows\\about\\supported_guest_os.md"
-  ],
-  "0f9464f2f6084b3aa09bab39562c5a6644f2b26e": [
-    "virtualization\\hyperv_on_windows\\about\\whats_new.md"
+  "b2c94ac52ef618490102103406d0ed0e4366a42b": [
+    "virtualization\\hyperv_on_windows\\about\\supported_guest_os_new.md"
   ],
   "9789cfa7d7b2f120cae015de229cbf8e4bbfc9b5": [
     "virtualization\\hyperv_on_windows\\develop\\make_mgmt_service.md"
@@ -176,7 +173,7 @@
   "66caa4c366c1b65937a913bfb39e3af350c2d9f6": [
     "virtualization\\hyperv_on_windows\\quick_start\\media\\revert.png"
   ],
-  "1bb032afcc9d2682ba3510f57991c95a0166dfb3": [
+  "768147f821f91ae45f4081ab4712ac3bfeb2dab5": [
     "virtualization\\hyperv_on_windows\\TOC.md"
   ],
   "15ca83a671c5bc684c7d4c7634b537c068af3643": [
@@ -211,6 +208,9 @@
   ],
   "8038edc8eac0a017e688401c61e5a78787f26bd6": [
     "virtualization\\hyperv_on_windows\\user_guide\\vmsession.md"
+  ],
+  "0f9464f2f6084b3aa09bab39562c5a6644f2b26e": [
+    "virtualization\\hyperv_on_windows\\whats_new.md"
   ],
   "cbabdb35380c570b836c00d580b94b96a130f57c": [
     "virtualization\\hyperv_on_windows\\windows_welcome.md"
