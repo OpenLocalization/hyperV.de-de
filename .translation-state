@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "d889877af14d8d6b2e1f84b9b9e7a31e873d017a",
+  "LastProcessedCommit": "933f9f9993b1f420c972eceeba3c0681e24afd15",
   "Items": {
     "08796bf856b1936c65df41076765d9f33d79e268": {
       "SourceFileCommit": "fdfa8efee03f92d2e23fcd07a362b50a2cdbe054",
@@ -827,13 +827,6 @@
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"
     },
-    "00f8d7cfb9fbdf0f9d67f239aff5575dcdaaaed0": {
-      "SourceFileCommit": "deef4b204c68f5588502c0b553cf8488bbbda205",
-      "SourceFilePath": "virtualization\\hyperv_on_windows\\about\\media\\ProductionCheckpoints.png",
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "UpdatedDateTime": "0001-01-01T00:00:00"
-    },
     "d5ff93f76a16632d5909862b698bee3b388b3e9d": {
       "SourceFileCommit": "2ed168a5c0abce728a312b0214d8a7bba5b4f7a6",
       "SourceFilePath": "virtualization\\hyperv_on_windows\\quick_start\\walkthrough_powershell.md",
@@ -869,16 +862,16 @@
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"
     },
-    "65595df4520fc1213e441db0c81f1d494d244894": {
-      "SourceFileCommit": "d9e651b366d1c0e7ed0ad361f0887fe6b883e6e0",
-      "SourceFilePath": "virtualization\\hyperv_on_windows\\about\\hyperv_on_windows.md",
+    "1bb032afcc9d2682ba3510f57991c95a0166dfb3": {
+      "SourceFileCommit": "d889877af14d8d6b2e1f84b9b9e7a31e873d017a",
+      "SourceFilePath": "virtualization\\hyperv_on_windows\\TOC.md",
       "TargetFileCommit": null,
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"
     },
-    "1bb032afcc9d2682ba3510f57991c95a0166dfb3": {
-      "SourceFileCommit": "d889877af14d8d6b2e1f84b9b9e7a31e873d017a",
-      "SourceFilePath": "virtualization\\hyperv_on_windows\\TOC.md",
+    "8aa8e3e59c6f7767c03118d30a2ce2c9c7365444": {
+      "SourceFileCommit": "933f9f9993b1f420c972eceeba3c0681e24afd15",
+      "SourceFilePath": "virtualization\\hyperv_on_windows\\about\\hyperv_on_windows_new.md",
       "TargetFileCommit": null,
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"

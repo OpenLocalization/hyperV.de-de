@@ -5,11 +5,8 @@
   "d95757903564f8beea62ad4d2977764d431eeeb8": [
     "virtualization\\community\\TOC.md"
   ],
-  "65595df4520fc1213e441db0c81f1d494d244894": [
+  "8aa8e3e59c6f7767c03118d30a2ce2c9c7365444": [
     "virtualization\\hyperv_on_windows\\about\\hyperv_on_windows_new.md"
-  ],
-  "00f8d7cfb9fbdf0f9d67f239aff5575dcdaaaed0": [
-    "virtualization\\hyperv_on_windows\\about\\media\\ProductionCheckpoints.png"
   ],
   "38df431021a76e5ed8464a7b6c30a23ddb2497f7": [
     "virtualization\\hyperv_on_windows\\about\\supported_guest_os.md"
