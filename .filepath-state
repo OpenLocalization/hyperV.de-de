@@ -17,11 +17,14 @@
   "0f9464f2f6084b3aa09bab39562c5a6644f2b26e": [
     "virtualization\\hyperv_on_windows\\about\\whats_new.md"
   ],
-  "9789cfa7d7b2f120cae015de229cbf8e4bbfc9b5": [
-    "virtualization\\hyperv_on_windows\\develop\\make_mgmt_service.md"
+  "1401bcd84e0dec58f1f219a2430dd8c5a7592db0": [
+    "virtualization\\hyperv_on_windows\\develop\\make_mgmt_servic_new.md"
+  ],
+  "96b5d85a97b47f6a399fc7a5f00cc37eac26379c": [
+    "virtualization\\hyperv_on_windows\\media\\2.png"
   ],
   "2fe214e2a741bb53de8e5d3ff3d2129f195a3208": [
-    "virtualization\\hyperv_on_windows\\develop\\powershell_snippets.md"
+    "virtualization\\hyperv_on_windows\\powershell_snippets.md"
   ],
   "7031d01ba57e1cf5a73f938b6a341f929fee8b1d": [
     "virtualization\\hyperv_on_windows\\quick_start\\walkthrough.md"
@@ -176,7 +179,7 @@
   "66caa4c366c1b65937a913bfb39e3af350c2d9f6": [
     "virtualization\\hyperv_on_windows\\quick_start\\media\\revert.png"
   ],
-  "d54ff95702b24ef825df2a973cb55960075287f5": [
+  "8f94c03654b7fe1dfa226bf4cd14dd6925307246": [
     "virtualization\\hyperv_on_windows\\TOC.md"
   ],
   "15ca83a671c5bc684c7d4c7634b537c068af3643": [
