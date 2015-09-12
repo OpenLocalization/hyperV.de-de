@@ -1,12 +1,9 @@
-ms.ContentId: 34D5925A-D724-4552-9403-C2703A973234 
-title: Migrating and upgrading virtual machines
+#Migrieren und Aktualisieren von virtuellen Maschinen
 
-#Migrate and upgrade virtual machines
+Wenn Sie virtueller Maschinen auf Maschinenebene Windows 10, die ursprünglich mit Hyper-V in Windows 8.1 oder früher erstellt wurden verschieben, werden nicht Sie möglicherweise die neue virtuelle Maschine-Features verwenden, bis Sie die virtuelle Maschine Konfigurationsversion manuell aktualisieren.
 
-If you move virtual machines to your Windows 10 host that were originally created with Hyper-V in Windows 8.1 or earlier, you won't be able to use the new virtual machine features until you manually update the virtual machine configuration version.
-
-To upgrade the configuration version, shut down the virtual machine and then select to Upgrade Virtual Machine Configuration in Hyper-V Manager.
-You can also open an elevated Windows PowerShell command prompt, and type:
+Um die Konfigurationsversion zu aktualisieren, den virtuellen Computer Herunterfahren Sie, und wählen Sie dann zum Upgrade Konfiguration des virtuellen Computers in Hyper-V Manager.
+Sie können auch eine erhöhte öffnen Windows PowerShell-Eingabeaufforderung, und geben:
 
  ```PowerShell
 Update-VmVersion <vmname> | <vmobject>
@@ -27,90 +24,85 @@ The PowerShell command produces the following sample output:
 
 ```
 
-Name        State       CPUUsage(%) MemoryAssigned(M)   Uptime              Status                  Version
+Name State CPUUsage(%) MemoryAssigned(M)-Uptime-Status-Version
 
-Atlantis    Running         0       1024                00:04:20.5910000    Operating normally      5.0
+Atlantis ausgeführt 0-1024 00:04:20.5910000 funktioniert normal 5.0
 
 SGC VM      Running         0       538                 00:02:44.8350000    Operating normally      6.2
 ```
 
-##What happens if I do not upgrade the configuration version?
+##Was passiert, wenn ich nicht die Konfiguration der Version aktualisieren?
 
-If you have virtual machines that you created with an earlier version of Hyper-V, some features may not work with those virtual machines until you update the VM version.
+Wenn Sie virtuelle Computer, die Sie mit einer früheren Version von Hyper-V erstellt verfügen, einige Funktionen funktioniert möglicherweise nicht mit diesen virtuellen Maschinen bis Sie die VM-Version zu aktualisieren.
 
-Minimum VM configuration version for new Hyper-V features:
+Minimale Version von VM-Konfiguration für Hyper-V-Neuerungen:
 
-| **Feature Name**| **Minimum VM version**| |
+| **Name des Features**| **Mindestversion VM**| |
 | :------------------------------------- | -----------------: ||
-| Hot Add/Remove Memory| 6.0| |
-| Hot Add/Remove Network Adapters| 5.0| |
-| Secure Boot for Linux VMs| 6.0| |
-| Production Checkpoints| 6.0| |
-| PowerShell Direct| 6.2| |
-| Virtual Trusted Platform Module (vTPM)| 6.2| |
-| Virtual Machine Grouping| 6.2| |
+| Heiße hinzufügen/entfernen-Speicher| 6.0| |
+| Heiße hinzufügen/entfernen-Netzwerkadapter| 5.0| |
+| Secure Boot für Linux-VMs| 6.0| |
+| Produktion-Checkpoints| 6.0| |
+| PowerShell-Direct| 6.2| |
+| Virtuelle Trusted Platform Module (vTPM)| 6.2| |
+| Virtuelle Maschine Gruppierung| 6.2| |
 
-##Virtual Machine Configuration Version
+##Virtuelle Maschine Konfigurationsversion
 
-When you move or import a virtual machine to a host running Hyper-V on Windows 10 from host running Windows 8.1, the virtual machine’s configuration file isn't automatically upgraded.
-This allows the virtual machine to be moved back to a host running Windows 8.1.
-You won't have access to new virtual machine features until you manually update the virtual machine configuration version.
+Beim Verschieben oder eine virtuelle Maschine auf einen Host mit Hyper-V auf Windows 10 von Windows 8.1-Host zu importieren, ist nicht die Konfigurationsdatei des virtuellen Computers automatisch aktualisiert.
+Dadurch kann die virtuelle Maschine auf einem Host mit Windows 8.1 zurück verschoben werden.
+Sie müssen nicht Zugriff auf virtuelle Maschine Neuerungen, bis Sie die virtuelle Maschine Konfigurationsversion manuell aktualisieren.
 
-The virtual machine configuration version represents what version of Hyper-V the virtual machine’s configuration, saved state, and snapshot files it's compatible with.
-Virtual machines with configuration version 5 are compatible with Windows 8.1 and can run on both Windows 8.1 and Windows 10.
-Virtual machines with configuration version 6 are compatible with Windows 10 and won't run on Windows 8.1.
+Die VM-Konfiguration-Version stellt dar, welche Version von Hyper-V-Konfiguration des virtuellen Computers gespeicherten Zustand und snapshot-Dateien, die mit kompatibel ist.
+Virtuelle Maschinen mit Konfiguration der Version 5 sind kompatibel mit Windows 8.1 und Windows 8.1 und Windows 10 ausführen.
+Virtuelle Maschinen mit Konfiguration der Version 6 sind kompatibel mit Windows 10 und läuft nicht auf Windows 8.1.
 
-It is not necessary to upgrade all of your virtual machines simultaneously.
-You can choose to upgrade specific virtual machines when required.
-However, you won't have access to new the virtual machine features until you manually update the configuration version for each virtual machine.
+Es ist nicht notwendig, um alle virtuellen Computer gleichzeitig zu aktualisieren.
+Sie können wählen, um bestimmte virtuelle Maschinen bei Bedarf zu aktualisieren.
+Allerdings müssen Sie nicht Zugriff auf neue virtuelle Maschine Funktionen, bis Sie die Konfigurations-Version für jeden virtuellen Computer manuell aktualisieren.
 
 ----------------
 **Important **
 
-• After you upgrade the virtual machine configuration version, you can't move the virtual machine to a host that runs Windows 8.1.
+• Nachdem Sie die virtuelle Maschine Konfigurationsversion aktualisieren, können nicht Sie die virtuelle Maschine an einen Host verschieben, die ausgeführt Windows 8.1 wird.
 
-• You can't downgrade the virtual machine configuration version from version 6 to version 5.
+• Die virtuelle Maschine Konfigurationsversion ab Version 6 auf Version 5 downgrade nicht möglich.
 
-• You must turn off the virtual machine to upgrade the virtual machine configuration.
+• Sie müssen den virtuellen Computer für die Konfiguration des virtuellen Computers aktualisieren deaktivieren.
 
-• After the upgrade, the virtual machine uses the new configuration file format.
-For more information, see New virtual machine configuration file format.
+• Nach dem Upgrade der virtuellen Maschine verwendet das Format der neuen Konfigurationsdatei.
+Weitere Informationen finden Sie unter neue virtuelle Maschine Konfigurations-Dateiformat.
 
 --------
 
-##What happens when I upgrade the version of a virtual machine?
+##Was passiert, wenn ich ein der Version einer virtuellen Maschine Upgrade?
 
-When you manually upgrade the configuration version of a virtual machine to version 6.x, you'll change the file structure that is used for storing the virtual machines configuration and checkpoint files.
+Wenn Sie manuell aktualisieren, die Konfigurationsversion einer virtuellen Maschine auf Version 6.x, ändern Sie die Dateistruktur, die zum Speichern der virtuellen Maschinen-Konfiguration und Checkpoint-Dateien verwendet wird.
 
-Upgraded virtual machines use a new configuration file format, which is designed to increase the efficiency of reading and writing virtual machine configuration data.
-The upgrade also reduces the potential for data corruption in the event of a storage failure.
+Aktualisierten virtuellen Maschinen verwendet ein neues Format für Konfiguration, zur Steigerung der Effizienz des Lesens und Schreibens von Daten zur Konfiguration der virtuellen Maschine vorgesehen ist.
+Das Upgrade reduziert auch das Potenzial für die Beschädigung von Daten beim Ausfall eines Speicher.
 
-The following table lists the binary file locations and extension information for an upgraded virtual machine.
+Die folgende Tabelle listet die Binärdatei Standorte und Erweiterungsinformationen für eine aktualisierte virtuelle Maschine.
 
-| **Virtual machine configuration and checkpoint files (version 6.x)**| **Description**| |
+| **VM-Konfiguration und Checkpoint-Dateien (Version 6.x)**| **Beschreibung**| |
 |:---------------|:----------------||
-| **Virtual machine configuration**| Configuration information is stored in a binary file format that uses the .vmcx extension.| |
-| **Virtual machine Runtime State**| Runtime state data is stored in a binary file format that uses the .vmrs extension.| |
-| **Virtual machine virtual hard disk**| The virtual hard disk files for the virtual machine.They use .vhd or .vhdx file extensions.| |
-| **Automatic  virtual hard disk files**| The differencing disk files used for virtual machine checkpoints.They use the .avhdx file extensions.| |
-| **Checkpoint Files**| Checkpoints are stored in multiple checkpoint files.Each checkpoint creates a configuration file and runtime state file.Checkpoint files use the .vmrs and .vmcx file extensions.These new file formats are also used for production checkpoints and standard checkpoints.| |
-After you upgrade the virtual machine configuration version to version 6.x, it is not possible to downgrade from version 6.x to version 5.
+| **Konfiguration des virtuellen Computers**| Konfigurationsinformationen werden in einem binären Dateiformat gespeichert, das die .vmcx-Erweiterung verwendet.| |
+| **Status des virtuellen Computers-Runtime**| Zustandsdaten Runtime werden in ein binäres Dateiformat gespeichert, das die .vmrs-Erweiterung verwendet.| |
+| **Virtuelle Festplatte virtuelle Maschine**| Die virtuelle Festplatte-Dateien für den virtuellen Computer.Sie verwenden die Dateierweiterungen VHD oder .vhdx.| |
+| **Automatische virtuelle Festplatte-Dateien**| Die differenzierende virtuelle Maschine Kontrollpunkte verwendeten Datenträgerdateien.Sie verwenden die .avhdx-Datei-Erweiterungen.| |
+| **Prüfpunktdateien**| Prüfpunkte werden in mehreren Checkpoint-Dateien gespeichert.Jedem Checkpoint erstellt eine Konfigurationsdatei und Runtime-Statusdatei.Checkpoint-Dateien verwenden, die .vmrs und .vmcx Dateierweiterungen.Diese neuen Dateiformate werden auch für Produktion Checkpoints und Norm Prüfpunkte verwendet.| |
+Nachdem Sie die Konfiguration des virtuellen Computers aktualisiert Version zu Version 6.x, es ist nicht möglich, downgrade von Version 6.x auf Version 5.
 
-The virtual machine must be turned off to upgrade the virtual machine configuration.
+Die virtuelle Maschine muss deaktiviert werden, um die Konfiguration des virtuellen Computers zu aktualisieren.
 
-The following table lists the default file locations for new or upgraded virtual machines.
+Die folgende Tabelle listet die Datei Standardspeicherorte für neue oder aktualisierte virtuelle Maschinen.
 
-| **Virtual Machine Files (Version 6.x)**| **Description**| |
+| **Dateien des virtuellen Computers (Version 6.x)**| **Beschreibung**| |
 |:-----|:-----||
-| **Virtual machine configuration file**| C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines| |
-| **Virtual machine runtime state file**| C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines| |
-| **Checkpoint Files (.vmrs, .vmcx)**| C:\ProgramData\Microsoft\Windows\Snapshots| |
-| **Virtual hard disk file (.vhd/.vhdx)**| C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks| |
-| **Automatic virtual hard disk files (.avhdx)**| C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks| |
-
-
-Users\Public\Documents\Hyper-V\Virtual Hard Disks ||
-
-
+| **Konfigurationsdatei der virtuellen Maschine**| C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Maschinen| |
+| **Virtuelle Maschine Runtime-Statusdatei**| C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Maschinen| |
+| **Checkpoint-Dateien (.vmrs, .vmcx)**| C:\ProgramData\Microsoft\Windows\Snapshots| |
+| **Virtuelle Festplattendatei (.vhd/.vhdx)**| C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks| |
+| **Automatische virtuelle Festplatte-Dateien (.avhdx)**| C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks| |
 
 

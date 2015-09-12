@@ -1,130 +1,127 @@
-ms.ContentId: FBBAADE6-F1A1-4B5C-8FD2-BDCA3FCF81CA
-title: Step 6: Experiment with checkpoints
+#Schritt 6: Experiment mit checkpoints
 
-#Step 6: Experiment with checkpoints
-
-Checkpoints are a helpful tool when you want to save the present state of a virtual machine before making a change such as applying an update, installing software, or changing a setting.
-If the change causes issues, you can restore the checkpoint and go back.
+Kontrollpunkte sind ein hilfreiches Werkzeug, wenn Sie den aktuellen Status einer virtuellen Maschine zu speichern, bevor Sie eine Änderung wie Anwenden eines Updates, Software installieren oder Ändern einer Einstellung möchten.
+Wenn die Änderung Probleme verursacht, können Sie wiederherstellen den Prüfpunkt und zurück.
 
 There are two types of checkpoints:  
-**Production checkpoints**: Used mainly on servers in production environments.
-**Standard checkpoints**: Used in development or testing environments
+**Produktion-Kontrollpunkte**: Vor allem auf Servern in Produktionsumgebungen eingesetzt.
+**Norm-Kontrollpunkte**: In Entwicklungs- oder Testumgebungen verwendet
 
-Production checkpoints are the default for Hyper-V on Windows 10.
+Produktion-Kontrollpunkte sind Standard für Hyper-V auf Windows 10.
 
-##Change the checkpoint type
+##Den Prüfpunkt-Typ ändern
 
-We'll start by trying out the older style of checkpoints, **standard checkpoints**.
-Since production checkpoints are the default, we need to go into the settings for the VM and change the checkpoint type.
+Wir beginnen, durch Ausprobieren den älteren Stil der Prüfpunkte, **Norm-Kontrollpunkte**.
+Da die Produktion der Standard sind, müssen wir rufen die Einstellungen für den virtuellen Computer, und ändern Sie den Typ der Prüfpunkt.
 
-1.  Right-click on **Windows Walkthrough VM** and select **Settings**.
-2.  In the **Management** section, select **Checkpoints**.
-3.  Select **Standard checkpoints**.
-    The dialog should look like this:
+1.  Mit einem Rechtsklick **Windows Walkthrough VM** und wählen Sie **Einstellungen**.
+2.  In der **Verwaltung** Abschnitt, wählen Sie **Prüfpunkte**.
+3.  Wählen Sie **Norm-Kontrollpunkte**.
+    Der Dialog sollte wie folgt aussehen:
     
     !(media/standard1.png)
-4.  Click **OK** to close the dialog box.
+4.  Klicken Sie auf **Okay** um das Dialogfeld zu schließen.
 
-##Open Notepad to test checkpoints
+##Offen Notepad Prüfpunkte zu testen
 
-In order to see what happens with each type of checkpoint, we'll run an application in the VM.
+Um zu sehen, was passiert mit jeder Art von Prüfpunkt, werden wir eine Anwendung in der VM ausführen.
 
-1.  Right-click on **Windows Walkthrough VM** and select **Connect**.
-2.  In the virtual machine, open **Notepad** by clicking on the **Start** menu and typing **Notepad** and then select it from the results.
-3.  In Notepad, type **This is a test of checkpoints.** The file should look like this:
+1.  Mit einem Rechtsklick **Windows Walkthrough VM** und wählen Sie **Verbinden**.
+2.  Öffnen Sie in der virtuellen Maschine **Notizblock** durch Anklicken der **Start** Menü und tippen **Notizblock** und wählen sie dann aus den Ergebnissen.
+3.  Geben Sie im Editor **Dies ist ein Test der Prüfpunkte.** Die Datei sollte so aussehen:
     
     !(media/standard_notepad.png)
-4.  Save the file as **test.txt**, but don't close Notepad.
-    Leave it running in the virtual machine.
+4.  Speichern Sie die Datei als **Test.txt**, aber nicht schließen Sie den Editor.
+    Lassen Sie es auf dem virtuellen Computer ausgeführt.
 
-##Create a standard checkpoint
+##Erstellen Sie einen standard-checkpoint
 
-1.  To create the checkpoint, click on the !(media/checkpoint_button.png)**Checkpoint** button in the menu bar.
-2.  In the checkpoint name dialog, type **Standard**.
-    The dialog should look like this:
+1.  Um den Prüfpunkt zu erstellen, klicken Sie auf die !(media/checkpoint_button.png)**Prüfpunkt** Schaltfläche in der Menüleiste.
+2.  Geben Sie im Dialogfeld Name Prüfpunkt **Standard**.
+    Der Dialog sollte wie folgt aussehen:
     
     !(media/save_standard.png)
-3.  When the process is complete, the checkpoint will appear under **Checkpoints** in the **Hyper-V Manager**.
+3.  Wenn der Prozess abgeschlossen ist, erscheint der Prüfpunkt unter **Prüfpunkte** in der **Hyper-V-Manager**.
     
     !(media/standard_complete.png)
 
-##Create a production checkpoint
+##Erstellen eines Checkpoints Produktion
 
-Now, we need to change change the type of checkpoint that we want to take back to **Production checkpoints** before taking a second checkpoint.
+Jetzt müssen wir ändern, ändern Sie den Typ des Prüfpunkts, die wir wollen zurück zu nehmen **Produktion-Kontrollpunkte** vor der Einnahme eines zweiten Checkpoints.
 
-1.  Right-click the virtual machine, and click **Settings**.
-2.  In the **Management** section, select **Checkpoints**.
-3.  Select **Production checkpoints**.
-4.  Clear the fall-back option.
-    If the system can't take a production checkpoint, we want it to fail instead of taking a standard checkpoint.
+1.  Mit der rechten Maustaste den virtuellen Computer, und klicken Sie auf **Einstellungen**.
+2.  In der **Verwaltung** Abschnitt, wählen Sie **Prüfpunkte**.
+3.  Wählen Sie **Produktion-Kontrollpunkte**.
+4.  Deaktivieren Sie die Option Herbst-zurück.
+    Wenn das System einen Checkpoint Produktion nehmen kann nicht, wollen wir statt einen Norm Checkpoint fehlschlagen lassen.
     
     !(media/production.png)
-5.  click **OK** to close the dialog box.
-6.  Right-click on the VM again and select **Connect**.
-7.  In Notepad in the VM, type another line that reads **This is a test of a production checkpoint** and save the file again.
-8.  Click on the !(media/checkpoint_button.png)**Checkpoint** button in the menu bar.
-9.  When asked, name it **Production** and then click **Yes**.
+5.  Klicken Sie auf **Okay** um das Dialogfeld zu schließen.
+6.  Der rechten Maustaste auf den virtuellen Computer erneut, und wählen Sie **Verbinden**.
+7.  Geben Sie im Editor in der VM eine weitere Zeile, die liest **Dies ist ein Test von einem Checkpoint Produktion** und speichern Sie die Datei erneut.
+8.  Klicken Sie auf die !(media/checkpoint_button.png)**Prüfpunkt** Schaltfläche in der Menüleiste.
+9.  Wenn gefragt, nennen Sie es **Produktion** und klicken Sie dann auf **Ja**.
     
     !(media/production_CheckpointName.png)
-10.  Close VMConnect.
-    The VM will continue running, you just won't be connected to it anymore.
-11.  In Hyper-V manager, your list of checkpoints will now look like this:
+10.  VMConnect zu schließen.
+    Die VM wird weiter ausgeführt, Sie nur wird nicht verbunden sein, es nicht mehr.
+11.  In Hyper-V-Manager wird Ihre Liste von Checkpoints nun so aussehen:
     
     !(media/production_complete.png)
 
-##Apply the standard checkpoint
+##Anwenden der Norm checkpoint
 
-1.  In **Hyper-V Manager**, in the **Checkpoints** section, right-click the one titled **Standard** and click **Apply**.
-2.  In the pop-up dialog, click **Create Checkpoint and Apply**.
+1.  In **Hyper-V-Manager**, in der **Prüfpunkte** Abschnitt der rechten Maustaste auf diejenige mit dem Titel **Standard** und klicken Sie auf **Gelten**.
+2.  Klicken Sie im Popup-dialog **Checkpoint zu erstellen und anwenden**.
     
     !(media/apply_standard.png)
-3.  When the finished, your list of checkpoints will now look something like this:
+3.  Wenn das fertig, Ihre Liste von Checkpoints jetzt wird etwa wie folgt aussehen:
     
     !(media/standard_applied.png)
-4.  When this finishes, right-click the VM and the click **Connect** to connect to the VM.
-5.  When you connect to the VM, the VM should be running, with Notepad open, but the line about production checkpoints will be missing:
+4.  Wenn dies abgeschlossen ist, mit der rechten Maustaste den virtuellen Computer und dann auf **Verbinden** der VM verbinden.
+5.  Beim Anschließen an die VM die VM sollte laufen, mit Notepad geöffnet, aber die Linie über Produktion Prüfpunkte werden fehlende:
     
     !(media/standard_applied_notepad.png)
-6.  Close VMConnect, but leave the VM running.
+6.  VMConnect zu schließen, aber die VM laufen lassen.
 
-##Apply the production checkpoint
+##Anwenden der Produktion-checkpoint
 
-Now, let's go back to Hyper-V manager and apply the production checkpoint and see how our VM looks afterwards.
+Nun gehen Sie wir zurück zu Hyper-V Manager und wenden Sie Checkpoint Produktion an und sehen Sie, wie unsere VM danach aussieht.
 
-1.  In the Checkpoints section, right-click the one titled **Production Checkpoint** and click **Apply**.
-2.  In the pop-up dialog, pick **Create Checkpoint and Apply**.
-3.  When this finishes, right-click the VM and the click **Connect** to launch the VM.
-4.  You'll notice that the VM is not running.
-    Click on the !(media/start.png) Start button in the menu bar to start the VM.
-5.  Open open test.txt in Notepad.
-    You should see the line in the file about testing production checkpoints:
+1.  Klicken Sie im Abschnitt Checkpoints derjenige mit dem Titel **Produktion-Checkpoint** und klicken Sie auf **Gelten**.
+2.  Wählen Sie im Popup-dialog **Checkpoint zu erstellen und anwenden**.
+3.  Wenn dies abgeschlossen ist, mit der rechten Maustaste den virtuellen Computer und dann auf **Verbinden** die VM zu starten.
+4.  Sie werden bemerken, dass die VM nicht ausgeführt wird.
+    Klicken Sie auf die !(media/start.png) Start-Taste in der Menüleiste auf die VM gestartet.
+5.  Öffnen Sie in Editor öffnen test.txt.
+    Sie sollten die Zeile in der Datei zum Testen Produktion Kontrollpunkte sehen:
     
     !(media/production_notepad.png)
 
-##Rename a checkpoint
+##Umbenennen eines Checkpoints
 
-1.  Right-click the last checkpoint in the tree and click Rename.
-2.  Name the checkpoint **Delete me**.
+1.  Maustaste auf dem letzten Checkpoint in der Struktur, und klicken Sie auf Umbenennen.
+2.  Name der Prüfpunkt **Streichen Sie mich**.
     
     !(media/delete_me.png)
 
-##Delete a checkpoint
+##Löschen eines Checkpoints
 
-The previous step has probably given you a hint about what we'll do next.
-We are going to delete the checkpoint that you just renamed.
+Vorherige Schritt hat wahrscheinlich Sie gegeben einen Hinweis, was wir als nächstes tun werde.
+Wir werden den Prüfpunkt zu löschen, den Sie gerade umbenannt.
 
-1.  Right-click on the checkpoint named **Delete me** and click **Delete checkpoint**.
+1.  Maustaste auf dem Checkpoint benannt **Streichen Sie mich** und klicken Sie auf **Prüfpunkt löschen**.
     
     !(media/delete_checkpoint.png)
-2.  In the warning dialog, click **Delete**.
+2.  Klicken Sie im Dialogfeld Warnung **Löschen**.
     
     !(media/delete_warn.png)
-3.  After the checkpoint is deleted, your list should look something like this:
+3.  Nach dem Checkpoint gelöscht wird, sollte die Liste wie folgt aussehen:
     
     !(media/after_delete.png)
 
-##Next Step:
+##Nächster Schritt:
 
-[Step 7: Export and import a virtual machine](walkthrough_export_import.md)
+[Schritt 7: Exportieren Sie und importieren Sie eine virtuelle Maschine](walkthrough_export_import.md)
 
 

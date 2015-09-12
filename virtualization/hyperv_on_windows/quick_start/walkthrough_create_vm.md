@@ -1,58 +1,55 @@
-ms.ContentId: 3C63F9A8-30E4-40F4-BC7B-A001C1E90779
-title: Step 4: Create a Windows virtual machine from an .iso file
+#Schritt 4: Erstellen einer virtuellen Windows-Maschine aus einer .iso-Datei
 
-#Step 4: Create a Windows virtual machine from an .iso file
+Für diesen Schritt haben Sie bereits eine .iso-Datei für eine unterstützte 64-Bit-Betriebssystem können, das Sie.
+Wenn dies nicht der Fall sein, können Sie die .iso für herunterladen [8.1 Windows Enterprise](http://www.microsoft.com/en-us/evalcenter/evaluate-windows-8-1-enterprise) und wählen Sie die 64-Bit-Edition.
 
-For this step, if you already have a .iso file for a supported 64-bit operating system, you can use that.
-If not, you can download the .iso for [Windows 8.1 Enterprise](http://www.microsoft.com/en-us/evalcenter/evaluate-windows-8-1-enterprise) and choose the 64-bit edition.
-
-1.  In Hyper-V Manager, click on the **Action** menu > **New** > **Virtual machine**.
-2.  In the virtual machine wizard, make the following choices:
+1.  In Hyper-V-Manager, klicken Sie auf die **Aktion** Menü > **Neu** > **Virtuelle Maschine**.
+2.  Stellen Sie im virtuellen Computer-Assistenten die folgenden Auswahlmöglichkeiten:
     
     <table>
       <tr>
-        <th caps_internal_Id="17378e71-09a5-4e57-8347-7701e3ddcf61">Page</th>
-        <th caps_internal_Id="96f4bd16-5e7f-496b-9f85-ece4cd068c62">Entry</th>
+        <th caps_internal_Id="ccf51af6-281f-4b63-ad5c-fa388626f192">Page</th>
+        <th caps_internal_Id="62587968-25f5-4744-8c04-1dbf454b1873">Entry</th>
       </tr>
       <tr>
-        <td caps_internal_Id="9dc25c31-8288-434e-b833-902d868b140b">Name:</td>
-        <td>Type in <b caps_internal_Id="7207cfe1-d8d2-4b6f-86dc-47b1bf7ec0b2">Windows Walkthrough VM</b></td>
+        <td caps_internal_Id="09f573ce-f477-4f2b-935f-d1b2ff399ae0">Name:</td>
+        <td>Type in <b caps_internal_Id="dbad4087-1e32-42b7-8923-664c91af67d8">Windows Walkthrough VM</b></td>
       </tr>
       <tr>
-        <td caps_internal_Id="cae6fb03-2358-4664-bb77-5d62d57dd476">Generation:</td>
+        <td caps_internal_Id="2c1fb44c-cd79-4cb4-94e4-b753ea763f2b">Generation:</td>
         <td>
-          <b caps_internal_Id="08c8c2ca-a20e-4d26-b364-36c5c47ee9d1">Generation 2</b>
+          <b caps_internal_Id="d622cbcf-91bf-48c5-ba6f-079e22c21b44">Generation 2</b>
         </td>
       </tr>
       <tr>
-        <td caps_internal_Id="c37b9e94-754b-42a0-891f-89e2e4b3b863">Startup Memory:</td>
+        <td caps_internal_Id="fd540478-f84b-4e2e-810e-7bd5fda7cea4">Startup Memory:</td>
         <td>
-          <b caps_internal_Id="b3f50451-eab4-477a-8226-5b0668db8cb6">1024</b> and leave dynamic memory selected</td>
+          <b caps_internal_Id="e124a5a3-6a46-4331-ac3a-0be34ff02c96">1024</b> and leave dynamic memory selected</td>
       </tr>
       <tr>
-        <td caps_internal_Id="0da193c3-96c6-4473-8de2-8d4c64d954fa">Configure Networking:</td>
+        <td caps_internal_Id="12357368-5093-4fe9-bf22-ee93ca5e49c0">Configure Networking:</td>
         <td>
-          <b caps_internal_Id="f3f43ee5-c114-4bdb-95d6-e8038779833a">External</b> (this is the virtual switch you created in Step 3)</td>
+          <b caps_internal_Id="1370e443-2fd9-4baa-b69d-849512ab7c86">External</b> (this is the virtual switch you created in Step 3)</td>
       </tr>
       <tr>
-        <td caps_internal_Id="a5028acd-c82a-46bf-927f-b96eb0661fb8">Connect virtual hard disk:</td>
+        <td caps_internal_Id="9ac9e23b-6518-49b0-b04d-688d3bdb6f75">Connect virtual hard disk:</td>
         <td>
-          <b caps_internal_Id="2734a738-99b6-40e5-9d2d-b6207f538cc3">Create a virtual hard disk</b> (keep the other default values) </td>
+          <b caps_internal_Id="6b73792b-8c64-4835-9fe2-02c3f0667f5d">Create a virtual hard disk</b> (keep the other default values) </td>
       </tr>
       <tr>
-        <td caps_internal_Id="77803214-a0a5-4e12-b703-df1b4327bd71">Installation Options:</td>
+        <td caps_internal_Id="0300269c-ca01-4734-84fc-4a45c84da81c">Installation Options:</td>
         <td>
-          <b caps_internal_Id="f8f3c9e7-82d6-406a-9948-5498bbb9dd5f">Install an operating system from a bootable CD/DVD-ROM</b>. Under <b caps_internal_Id="3d903005-fff3-4251-a433-3a2b17dccbf2">Media</b>, select <b caps_internal_Id="65bb6e58-8230-413c-8bdf-f8a6c7df070e">Image file (iso)</b> and then click <b caps_internal_Id="7be0009c-5ab0-4951-8bcd-62b5ccdad654">Browse</b> to point to the .iso file.</td>
+          <b caps_internal_Id="1bd6e0f6-ca10-403d-984d-e735796137cf">Install an operating system from a bootable CD/DVD-ROM</b>. Under <b caps_internal_Id="aebc7ac8-72ed-42a9-a64e-75ef0728000c">Media</b>, select <b caps_internal_Id="f64cd4b0-afa6-44bb-a830-048bddb8e00c">Image file (iso)</b> and then click <b caps_internal_Id="37d6ac07-cb5d-4619-bd75-95fe9e8b24f8">Browse</b> to point to the .iso file.</td>
       </tr>
     </table>
-3.  When everything looks right, click **Finish**.
+3.  Wenn alles gut aussieht, klicken Sie **Fertig stellen**.
 
-> **Note:** If you only have 32-bit version of Windows, you need to choose Generation 1 in the **Generation** section of the wizard.
-> Generation 2 VMs only support 64-bit operating systems.
+> **Hinweis:** Wenn Sie nur 32-Bit-Version von Windows haben, musst du Generation 1 in wählen die **Erstellung der** Abschnitt des Assistenten.
+> Generation 2 VMs nur unterstützen 64-Bit-Betriebssysteme.
 > 
 
-##Next Step:
+##Nächster Schritt:
 
-[Step 5: Connect to the virtual machine and finish the installation](walkthrough_vmconnect.md)
+[Schritt 5: Verbinden Sie mit dem virtuellen Computer und schließen die Installation ab](walkthrough_vmconnect.md)
 
 

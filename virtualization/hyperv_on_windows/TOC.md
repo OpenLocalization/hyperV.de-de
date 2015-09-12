@@ -1,54 +1,54 @@
-#HyperV
+#Hyper-v
 
-##About
+##Über
 
-###[Hyperv on Windows](about/hyperv_on_windows.md)
+###[Hyper-V auf Windows](about/hyperv_on_windows_new.md)
 
-###[Supported Guest OS](about/supported_guest_os.md)
+###[Unterstützte Gastbetriebssystem](about/supported_guest_os.md)
 
-###[Whats New](about/whats_new.md)
+###[Was ist neu](about/whats_new.md)
 
 ##[Build](about/build.md)
 
-##Develop
+##Entwickeln
 
-###[Make Mgmt Service](develop/make_mgmt_service.md)
+###[Mgmt-Dienst machen](develop/make_mgmt_service.md)
 
-###[Powershell Snippets](develop/powershell_snippets.md)
+###[PowerShell-Snippets](develop/powershell_snippets.md)
 
-##Quick Start
+##Quick-Start
 
-###[Walkthrough](quick_start/walkthrough.md)
+###[Exemplarische Vorgehensweise](quick_start/walkthrough.md)
 
-###[walkthrough checkpoints](quick_start/walkthrough_checkpoints.md)
+###[Exemplarische Vorgehensweise Prüfpunkte](quick_start/walkthrough_checkpoints.md)
 
-###[walkthrough compatibility](quick_start/walkthrough_compatibility.md)
+###[Walkthrough-Kompatibilität](quick_start/walkthrough_compatibility.md)
 
-###[walkthrough create_vm](quick_start/walkthrough_create_vm.md)
+###[Exemplarische Vorgehensweise erstellen VM](quick_start/walkthrough_create_vm.md)
 
-###[walkthrough export_import](quick_start/walkthrough_export_import.md)
+###[Exemplarische Vorgehensweise Export import](quick_start/walkthrough_export_import.md)
 
-###[walkthrough install](quick_start/walkthrough_install.md)
+###[Exemplarische Vorgehensweise installieren](quick_start/walkthrough_install.md)
 
-###[walkthrough powershell](quick_start/walkthrough_powershell.md)
+###[Exemplarische Vorgehensweise powershell](quick_start/walkthrough_powershell.md)
 
-###[walkthrough virtual switch](quick_start/walkthrough_virtual_switch.md)
+###[exemplarischen virtuellen switch](quick_start/walkthrough_virtual_switch.md)
 
-###[walkthrough vmconnect](quick_start/walkthrough_vmconnect.md)
+###[Exemplarische Vorgehensweise vmconnect](quick_start/walkthrough_vmconnect.md)
 
-##User Guide
+##Benutzerhandbuch
 
-###[checkpoints](user_guide/checkpoints.md)
+###[Prüfpunkte](user_guide/Prüfpunkte.md)
 
-###[export import](user_guide/export_import.md)
+###[Export-import](user_guide/export_import.md)
 
-###[migrating vms](user_guide/migrating_vms.md)
+###[Migration von vms](user_guide/migrating_vms.md)
 
-###[remote host management](user_guide/remote_host_management.md)
+###[Verwaltung von Remote-host](user_guide/remote_host_management.md)
 
-###[troubleshooting](user_guide/troubleshooting.md)
+###[Problembehandlung bei](user_guide/Problembehandlung bei.md)
 
-###[user guide nav](user_guide/user_guide_nav.md)
+###[Benutzer-Handbuch-nav](user_guide/user_guide_nav.md)
 
 ###[vmsession](user_guide/vmsession.md)
 

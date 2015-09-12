@@ -1,42 +1,39 @@
-ms.ContentId: C2593EA1-B182-4C71-8504-49691F619158
-title: Step 1: Make sure your machine is compatible
+#Schritt 1: Stellen Sie sicher, dass Ihre Maschine Hyper-V ausgeführt werden können
 
-#Step 1: Make sure your machine can run Hyper-V
+Nur Windows 10 Pro und Windows 10 Enterprise unterstützt Hyper-V.
 
-Only Windows 10 Pro and Windows 10 Enterprise support Hyper-V.
-
-> If you're running Windows 10 Home -- you can upgrade to Win 10 Pro in the Activation page located in the security settings.
-> The "Go to store" link will take you to a page for upgrading.
+> Wenn Sie Windows 10 Home--ausführen können Sie in der Aktivierungs-Seite befindet sich in den Sicherheitseinstellungen auf Win 10 Pro aktualisieren.
+> Der Link "Gehe um zu speichern" gelangen Sie zu einer Seite für die Aktualisierung.
 > 
 
-Hyper-V is not available in Windows 10 Mobile / Windows 10 Mobile Enterprise
+Hyper-V ist nicht verfügbar in Windows 10 Mobile / Windows 10 Mobile Enterprise
 
-Hyper-V requires at least 4 GB of RAM but you might need more if you want to run multiple virtual machines at the same time.
+Hyper-V erfordert mindestens 4 GB RAM, aber Sie brauchen mehr, wenn Sie mehrere virtuelle Computer gleichzeitig ausführen möchten.
 
-Starting in Windows 10, Hyper-V requires a 64-bit processor with Second Level Address Translation (SLAT).
+Ab Windows 10, erfordert Hyper-V einen 64-Bit-Prozessor mit Second Level Address Translation (Stab).
 
-##Verify hardware compatability
+##Überprüfen Sie die Hardware-Kompatibilität
 
-To verify compatability, open PowerShell or a Windows command prompt (cmd.exe) and type: `systeminfo.exe`.
-This will give you information about your computer.
+Um Kompatibilität zu überprüfen, öffnen Sie PowerShell oder eine Windows-Eingabeaufforderung (cmd.exe) und Typ: `systeminfo.exe`.
+Dadurch erhalten Sie Informationen über Ihren Computer.
 
-All of the items under **Hyper-V Requirements** must have the value if **Yes**.
+Alle Elemente unter **Hyper-V-Anforderungen** muss den Wert wenn verfügen **Ja**.
 
 !(media\systeminfo.png)
 
-Relevant sections:
+Relevanten Bereichen:
 
-*   `OS Name` -- Must be Windows 8 or higher and either Profession or Enterprise.
-*   `Hyper-V Requirements` -- all of these must be true (value of "Yes") but some can be configured in BIOS.
+*   `OS Name` --Windows 8 oder höher und Beruf oder Enterprise muss sein.
+*   `Hyper-V Requirements` --all dies muß wahr (Wert "Yes"), aber einige können im BIOS eingestellt werden.
     
-    *   `VM Monitor Mode Extensions` -- Property of the hardware.
-        Hyper-V can not run on this machine.
-    *   `Virtualization Enabled in Firmware` -- Can be enabled in BIOS
-    *   `Second Level Address Translation` -- Property of the hardware.
-        Hyper-V can not run on this machine.
-    *   `Data Execution Prevention Available` -- Can be enabled in BIOS
+    *   `VM Monitor Mode Extensions` --Eigenschaft der Hardware.
+        Hyper-V kann nicht auf diesem Computer ausführen.
+    *   `Virtualization Enabled in Firmware` --Kann im BIOS aktiviert werden
+    *   `Second Level Address Translation` --Eigenschaft der Hardware.
+        Hyper-V kann nicht auf diesem Computer ausführen.
+    *   `Data Execution Prevention Available` --Kann im BIOS aktiviert werden
 
-If Hyper-V is already enabled, the Hyper-V Requirements section will read:  
+Wenn Hyper-V bereits aktiviert ist, liest der Abschnitt über die Hyper-V-Anforderungen:  
 
 
 ```
@@ -45,8 +42,8 @@ Hyper-V Requirements: A hypervisor has been detected. Features required for Hype
 ```
 
 
-##Next Step:
+##Nächster Schritt:
 
-[Step 2: Install Hyper-V](walkthrough_install.md)
+[Schritt 2: Installieren von Hyper-V](walkthrough_install.md)
 
 

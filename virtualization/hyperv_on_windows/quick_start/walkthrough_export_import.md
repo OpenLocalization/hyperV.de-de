@@ -1,58 +1,55 @@
-ms.ContentId: B971C429-CEF0-4DAB-8456-3B08AEC0C233
-title: Step 7: Export and import a virtual machine
+#Schritt 7: Exportieren Sie und importieren Sie eine virtuelle Maschine
 
-#Step 7: Export and import a virtual machine
+Schnell können einen virtuellen Computer zu kopieren oder verschieben eine virtuellen Maschine mit dem Exportieren und Importieren von Funktionalität.
 
-You can quickly copy a virtual machine or move a virtual machine by using the export and import functionality.
+##Export der VM
 
-##Export the VM
+Exportieren einer virtuellen Maschine exportiert alle Stücke der VM, einschließlich den Checkpoints.
 
-Exporting a virtual machine exports all of the pieces of the VM, including the checkpoints.
-
-1.  In Hyper-V Manager, right-click the virtual machine and select **Export**.
+1.  In Hyper-V-Manager mit der rechten Maustaste den virtuellen Computer, und wählen Sie **Export**.
     
     !(media/select_export1.png)
-2.  Click **Browse** in the dialog box and navigate to  C:\Users\Public and then click **Select Folder**.
-3.  In the **Export Virtual Machine** dialog, make sure the path looks okay and then click **Export**.
+2.  Klicken Sie auf **Durchsuchen** im Dialog box und navigieren Sie zu C:\Users\Public und klicken Sie auf **Wählen Sie Ordner**.
+3.  In der **Virtuellen Computer exportieren** Dialogfeld, stellen Sie sicher, dass der Pfad in Ordnung aussieht und dann auf **Export**.
     
     !(media/click_export.png)
-4.  While the VM is being exported, you can see the progress in the Status section:
+4.  Während die VM exportiert wird, können Sie den Fortschritt im Abschnitt Status sehen:
     
     !(media/export_progress.png)
 
-##Did the export work?
+##Funktionierte der Export?
 
-To verify that the virtual machine was exported, right-click on your **Start** menu and select **File Explorer**.
+Um sicherzustellen, dass die virtuelle Maschine exportiert wurde, rechtsklicken Sie auf Ihre **Start** Menü und wählen Sie **Datei-Explorer**.
 
-1.  Navigate to C:\Users\Public\Windows Walkthrough VM.
-2.  You should see another folder called Windows Walkthrough VM and inside that folder should be three folders with the files for your exported virtual machine:
+1.  Navigieren Sie zu C:\Users\Public\Windows Exemplarische Vorgehensweise VM.
+2.  Sehen Sie einen anderen Ordner namens Windows Walkthrough VM und in diesem Ordner sollte drei Ordner mit den Dateien für Ihre exportierten virtuellen Maschine:
     
-    *   Snapshots
-    *   Virtual Hard Disks
-    *   Virtual Machines 
+    *   Momentaufnahmen
+    *   Virtuelle Festplatten
+    *   Virtuelle Maschinen 
     
     !(media/export_confirm.png)
 
-##Import the VM
+##Die VM importieren
 
-Before we import the VM, we are going to delete the original VM.
-Right-click on the VM and select **Delete**.
+Bevor wir die VM importieren, werden wir die ursprüngliche VM löschen.
+Mit der rechten Maustaste auf die VM und wählen Sie **Löschen**.
 
-1.  In **Hyper-V Manager**, in the **Action** menu, click **Import Virtual Machine**.
-2.  In the **Locate Folder** section, click Browse and navigate to C:\Users\Public\Windows Walkthrough VM  and then click **Next**.
-3.  In the **Select virtual machine to import** screen click **Next**.
-4.  In the **Choose Import Type** section, select **Register the virtual machine in place** and then click **Next**.
-5.  In the **Choose Destination** section, leave the default and click **Next**.
-6.  In Choose Storage folders, leave the default path and click **Next**.
-7.  On the summary page you'll see a list of the paths where the new VM files will be located.
-    Click **Finish** to start the import.
+1.  In **Hyper-V-Manager**, in der **Aktion** im Menü klicken **Virtuelle Maschine importieren**.
+2.  In der **Suchen Sie den Ordner** Abschnitt, klicken Sie auf Durchsuchen und navigieren Sie zu C:\Users\Public\Windows Exemplarische Vorgehensweise VM und dann auf **Nächste**.
+3.  In der **Wählen Sie virtuellen Computer importieren** Bildschirm klicken **Nächste**.
+4.  In der **Wählen Sie Importtyp** Abschnitt, wählen Sie **Registrieren Sie die virtuelle Maschine im Ort** und klicken Sie dann auf **Nächste**.
+5.  In der **Wählen Sie Ziel** Abschnitt behalten Sie die Standardeinstellung, und klicken Sie **Nächste**.
+6.  Verlassen Sie im Speicherordner auswählen den Standardpfad zu und auf **Nächste**.
+7.  Auf der Übersichtsseite sehen Sie eine Liste der Pfade, wo die neuen VM-Dateien gespeichert werden.
+    Klicken Sie auf **Fertig stellen** um den Import zu starten.
 
-##Did the import work?
+##Funktionierte der Import?
 
-To make sure the import worked, just double-click the VM in **Hyper-V Manager** and launch VMConnect to check the VM.
+Um sicherzustellen, dass der Import gearbeitet haben, doppelklicken Sie einfach die VM in **Hyper-V-Manager** und starten Sie VMConnect um die VM zu überprüfen.
 
-##Next Step:
+##Nächster Schritt:
 
-[Step 8: Experiment with Windows Powershell](walkthrough_powershell.md)
+[Schritt 8: Experimentieren Sie mit Windows Powershell](walkthrough_powershell.md)
 
 

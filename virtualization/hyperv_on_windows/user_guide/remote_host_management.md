@@ -1,85 +1,82 @@
-ms.ContentId: 7dcd6da0-dd72-422d-8752-5eccc8116e02
-title: Managing remote Hyper-V hosts
+#Verwalten von Remote-Hyper-V-Hosts mit Hyper-V-Manager
 
-#Manage Remote Hyper-V Hosts with Hyper-V Manager
+Hyper-V Manager bietet Tools für die Diagnose und Verwaltung von Ihrem lokalen Hyper-V-Host und eine kleine Anzahl von entfernten Rechnern.
+Dieser Artikel dokumentiert die Konfigurationsschritte für die Verbindung mit Hyper-V-Hosts mit Hyper-V Manager in allen unterstützten Konfigurationen.
 
-Hyper-V Manager provides tools for diagnosing and managing your local Hyper-V host and a small number of remote hosts.
-This article documents the configuration steps for connecting to Hyper-V hosts using Hyper-V Manager in all supported configurations.
-
-To connect to a Hyper-V host in Hyper-V Manager, make sure **Hyper-V Manager** is selected in the left hand pane and then select **Connect to Server...** in the right-hand pane.
+Zum Verbinden mit Hyper-V-Hosts im Hyper-V-Manager stellen Sie sicher **Hyper-V-Manager** ist im linken Bereich ausgewählt und wählen Sie dann **Mit Server verbinden...** im rechten Fensterbereich.
 
 !(media/HyperVManager-ConnectToHost.png)
 
-##Supported Hyper-V host combinations with Hyper-V Manager
+##Unterstützte Kombinationen der Hyper-V-Host mit Hyper-V Manager
 
-Hyper-V Manager in Windows 10 allows you to manage:
+Hyper-V-Manager in Windows 10 können Sie verwalten:
 
 *   Windows 10
-*   Windows 8.1 and Windows Server 2012 R2 Hyper-V hosts
-*   Windows 8 and Windows 2012 Hyper-V hosts
+*   8.1 für Windows und Windows Server 2012 R2 Hyper-V-hosts
+*   Windows 8 und Windows 2012 Hyper-V-hosts
 
-Hyper-V Manager in Windows 8.1 and Windows Server 2012 R2 allows you to manage:
+Hyper-V-Manager in Windows 8.1 und Windows Server 2012 R2 können Sie verwalten:
 
-*   Windows 8.1 and Windows Server 2012 R2 Hyper-V hosts
-*   Windows 8 and Windows 2012 Hyper-V hosts
+*   8.1 für Windows und Windows Server 2012 R2 Hyper-V-hosts
+*   Windows 8 und Windows 2012 Hyper-V-hosts
 
-> **Note:** Not all Hyper-V Manager functionality works for all host versions.
+> **Hinweis:** Nicht alle Funktionen von Hyper-V Manager eignet sich für alle Host-Versionen.
 > 
 
-##Manage localhost
+##Verwalten von "localhost"
 
-To add localhost to Hyper-V Manager as a Hyper-V host, select **Local computer** in the **Select Computer** dialogue box.
+Um Hyper-V Manager als Hyper-V Host "localhost" hinzuzufügen, wählen Sie **Lokalen computer** in der **Wählen Sie Computer** Dialog-Box.
 
 !(media/HyperVManager-ConnectToLocalHost.png)
 
-If a connection can't be established:
+Wenn keine Verbindung hergestellt werden kann:
 
-*   Make sure the Hyper-V server role is enabled.
-    See the [walkthrough section for checking compatability](../quick_start/walkthrough_compatibility.md).
-*   Confirm that your user account is part of the Hyper-V Administrator group.
+*   Stellen Sie sicher, dass die Hyper-V-Serverrolle aktiviert ist.
+    Finden Sie unter der [Anleitung-Abschnitt für die Überprüfung der Kompatibilität](../quick_start/walkthrough_compatibility.md).
+*   Bestätigen Sie, dass Ihr Benutzerkonto in der Hyper-V-Administratorgruppe ist.
 
-##Manage a Hyper-V host in your domain
+##Hyper-V-Hosts in Ihrer Domäne zu verwalten
 
-To add a remote Hyper-V host to Hyper-V Manager, select **Another computer** in the **Select Computer** dialogue box and enter the remote host's hostname, NetBIOS, or FQDN into the text field.
+Wählen Sie zum Hinzufügen eines Hyper-V-Remotehosts, um Hyper-V Manager **Einem anderen computer** in der **Wählen Sie Computer** Dialog Feld und geben Sie des remote-Hosts Hostname, NetBIOS- oder FQDN in das Textfeld ein.
 
 !(media/HyperVManager-ConnectToRemoteHost.png)
 
-Windows 10 greatly expanded the possible combinations of remote connection types.
-Now you can connect to a remote Windows 10 or later host using either the host name or IP address.
-Hyper-V Manager now supports alternate credentials as well.
+Stark erweitert Windows 10 möglichen Kombinationen der Remoteverbindung Typen.
+Jetzt können Sie auf einen entfernten Windows-10 oder später Host verwenden entweder den Hostnamen oder die IP-Adresse verbinden.
+Hyper-V Manager unterstützt nun auch alternative Anmeldeinformationen.
 
-In order to manage remote Hyper-V hosts, remote management must be enabled on both computers.
+Um remote Hyper-V-Hosts zu verwalten, muss die Remoteverwaltung auf beiden Computern aktiviert sein.
 
-You can do this through `System Properties -> Remote Management Settings` or by running the following PowerShell command as Administrator:  
+Hierzu können Sie durch `System Properties -> Remote Management Settings` oder durch den folgenden PowerShell-Befehl als Administrator ausführen:  
 
 ` PowerShell
 winrm quickconfig
 `
 
-If your current user account matches a Hyper-V Administrator account on the remote host, go ahead and press **OK** to Connect.
+Wenn Ihre aktuellen Benutzerkonto ein Hyper-V-Administratorkonto auf dem entfernten Host entspricht, gehen Sie voran und drücken Sie **Okay** Herstellen einer Verbindung.
 
-This is the only supported way to manage a remote host in Hyper-V Manager in Windows 8 or Windows 8.1.
+Dies ist der einzige unterstützte Weg zu einen Remotehost in Hyper-V-Manager in Windows 8 oder Windows 8.1 verwalten.
 
-###Connect to the remote host as a different user
+###Verbinden Sie mit dem Remotehost als anderer Benutzer
 
-In Windows 10, if you are not running with the correct user account for the remote host, you can connect as another user with alternate credentials.
+In Windows 10 wenn Sie nicht mit dem richtigen Benutzer-Account für die remote-Host ausführen, können Sie als ein anderer Benutzer mit alternativen Anmeldeinformationen verbinden.
 
-To specify credentials for the remote Hyper-V host, select **Connect as another user: ** in the **Select Computer** dialogue box then select **Set User...**.
+Um Anmeldeinformationen für den Hyper-V-Remotehost anzugeben, wählen Sie **Als ein anderer Benutzer eine Verbindung herstellen: ** in der ** Computer auswählen** Dialogbox wählen Sie dann **Festlegen von...**.
 
 !(media/HyperVManager-ConnectToRemoteHostAltCreds.png)
 
-> Note:  It's very easy to forget to set the user and click OK with user not specified.
-> If your connection fails, make sure you actually did set the user.
+> Hinweis: Es ist sehr einfach zu vergessen, den Benutzer und klicken Sie auf OK mit Benutzer nicht angegeben.
+> Wenn die Verbindung fehlschlägt, stellen Sie sicher, dass Sie tatsächlich den Benutzer festgelegt.
 > 
 
-###Connect to the remote host using IP address
+###Verbinden Sie mit dem remote-Host mit IP-Adresse
 
-Sometimes it's easier to connect using IP address rather than host name.
-Windows 10 allows your to do just that.
+Manchmal ist es einfacher, eine Verbindung mit IP-Adresse als Host-Namen.
+Windows 10 erlaubt Ihr genau das zu tun.
 
-To connect using IP address, enter the IP address into the **Another Computer** text field.
+Um die Verbindung mit IP-Adresse, IP-Adresse in der **Einem anderen Computer** Text-Feld.
 
-##Manage a Hyper-V host outside your domain (or with no domain)
+##Verwalten von Hyper-V-Hosts außerhalb Ihrer Domäne (oder ohne Domäne)
 
 <!--Assuming this isn't done yet...again needs context.-->
 Local Hyper-V Host:
@@ -88,22 +85,22 @@ Local Hyper-V Host:
     Came back with netowork set to public.
     Ran
     Set-NetConnectionProfile -Name "name" -NetworkCategory private
-2.  Set-Item WSMan:\localhost\Client\TrustedHosts * -Force
-3.  Enable-WSManCredSSP -Role client -DelegateComputer *
+2.  Mengenelement WSMan:\localhost\Client\TrustedHosts *-Kraft
+3.  Aktivieren-WSManCredSSP-Rolle-Client - DelegateComputer *
 
-For workgroup only:
+Für nur Workgroup:
 
-1.  (should be done) Computer Policy\Administrative Templates\System\Credentials Delegation\Allow Delegating Fresh Credentials → Set to enabled and add WSMAN/* ].
-    To list of computers, check the box forConcatenate OS defaults with input above
-2.  Computer Policy\Administrative Templates\System\Credentials Delegation\Allow Delegating Fresh Credentials with NTLM-only server authentication → Set to enabled and add WSMAN/* to list of computers, check the box for Concatenate OS defaults with input above
-3.  Computer Policy\Administrative Templates\Windows Components\Windows Remote Management (WinRM)\WinRM Client\Allow CredSSP authentication → Set to enabled
+1.  (sollte erfolgen) Computer → Policy\Administrative Templates\System\Credentials Delegation\Allow delegieren frisch Anmeldeinformationen festlegen auf aktiviert, und fügen Sie WSMAN / *].
+    Liste der Computer überprüfen Sie die ForConcatenate OS standardmäßig mit Eingang oben
+2.  Policy\Administrative Templates\System\Credentials Delegation\Allow delegieren frisch Computeranmeldeinformationen mit Server nur NTLM-Authentifizierung → festlegen auf aktiviert, und fügen Sie WSMAN / * Liste der Computer, aktivieren Sie das Kontrollkästchen für verketten OS Defaults mit Eingang oben
+3.  Computer Policy\Administrative Vorlagen\Windows-Komponenten\Windows-Remoteverwaltung (WinRM) \WinRM Client\Allow CredSSP Authentifizierung → festlegen auf aktiviert
 
-Remote Hyper-V Host:
+Remote-Hyper-V-Host:
 
-1.  Disabled the firewall :)
+1.  Deaktiviert die Firewall :)
 2.  Enable-PSRemoting
 3.  Set-Item WSMan:\localhost\Client\TrustedHosts * -Force
     So that's the demo-only instructions I used.
-    Replace * and turn off firewall with a single computer and letting credssp and winRM through
+    Ersetzen * und deaktivieren Sie die Firewall mit einem einzelnen Computer und lassen Credssp und WinRM durch
 
 

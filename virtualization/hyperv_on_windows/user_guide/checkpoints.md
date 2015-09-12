@@ -1,83 +1,80 @@
-ms.ContentId: 8D89E9D8-2501-46A7-9304-2F19F37AFC85
-title: Working with checkpoints
+#Verwendung von Prüfpunkten virtuelle Computer in einen früheren Zustand wiederherstellen
 
-#Using checkpoints to revert virtual machines to a previous state
+Prüfpunkte bieten eine schnelle und einfache Möglichkeit, den virtuellen Computer in einen früheren Zustand wiederherzustellen.
+Dies ist besonders hilfreich, wenn Sie zu einer virtuellen Maschine ändern und Sie in der Lage, zu den gegenwärtigen Zustand Rollback Wenn Ursache Probleme ändern möchten.
 
-Checkpoints provide a fast and easy way to revert the virtual machine to a previous state.
-This is especially helpful when you are about to make a change to a virtual machine and you want to be able to roll-back to the present state if that change cause issues.
+##Aktivieren oder Deaktivieren von Prüfpunkten
 
-##Enable or disable checkpoints
+1.  In **Hyper-V-Manager**, klicken Sie mit der rechten Maustaste auf den virtuellen Computer, und klicken Sie auf **Einstellungen**.
+2.  In der **Verwaltung** Abschnitt, wählen Sie **Prüfpunkte**.
+3.  Damit können Kontrollpunkte dieser virtuellen Maschine abgenommen werden, stellen Sie sicher, dass Checkpoints aktivieren ausgewählt ist--ist dies das Standardverhalten.
+    Um die Prüfpunkte zu deaktivieren, deaktivieren Sie die **Checkpoints aktivieren** das Kontrollkästchen.
+4.  Klicken Sie auf **Gelten** um Ihre Änderungen zu übernehmen.
+    Wenn Sie fertig sind, klicken Sie auf **Okay** um das Dialogfeld zu schließen.
 
-1.  In **Hyper-V Manager**, right-click the name of the virtual machine, and click **Settings**.
-2.  In the **Management** section, select **Checkpoints**.
-3.  To allow checkpoints to be taken off this virtual machine, make sure Enable Checkpoints is selected -- this is the default behavior.
-    To disable checkpoints, deselect the **Enable Checkpoints** check box.
-4.  Click **Apply** to apply your changes.
-    If you are done, click **OK** to close the dialog box.
+##Wählen Sie Standard oder Produktion Prüfpunkte
 
-##Choose standard or production checkpoints
+Es gibt zwei Arten von Checkpoints:
 
-There are two types of checkpoints:
+*   **Produktion-Kontrollpunkte** --Als eine Form der Sicherung vor allem auf Servern in Produktionsumgebungen verwendet.
+*   **Norm-Kontrollpunkte** --In Entwicklungs- oder Testumgebungen verwendet, um Rollback zu ermöglichen, wenn eine Änderung fehlschlägt.
 
-*   **Production checkpoints** -- Used mainly on servers in production environments as a form of backup.
-*   **Standard checkpoints** -- Used in development or testing environments to allow rollback if a change fails.
+Beide Arten von Checkpoints wiederherstellen eine virtuelle Maschine auf einen früheren Zustand.
 
-Both types of checkpoints restore a virtual machine to a previous state.
+Produktion-Kontrollpunkte erstellt ein anwendungskonsistente-Checkpoint einer virtuellen Maschine.
+Das bedeutet, dass die gespeicherte virtuelle Maschine mit keine Anwendungszustand fortgesetzt wird.
 
-Production checkpoints create an application-consistent checkpoint of a virtual machine.
-That means the saved virtual machine will resume with no application state.
+Norm Prüfpunkte (früher bekannt als Snapshots) erfassen den genaue Speicherstatus Ihrer virtuellen Maschine.
+Das bedeutet, dass die virtuelle Maschine mit wiederhergestellt werden sollen **genau** den gleichen Zustand, in dem Checkpoint zu genauen Anwendungszustand abgenommen wurde.
+Norm-Kontrollpunkte können Informationen über Client-Verbindungen, Transaktionen und den externen Netzwerk-Status enthalten.
+Diese Informationen möglicherweise nicht gültig, wenn der Prüfpunkt angewendet wird.
+Darüber hinaus werden ein Checkpoint in einem Absturz des Programms getroffen wird, Wiederherstellen von diesen Prüfpunkt in der Mitte dieser Absturz.
 
-Standard checkpoints (formerly known as snapshots) capture the exact memory state of your virtual machine.
-That means the virtual machine will restore with **exactly** the same state in which the checkpoint was taken down to the exact application state.
-Standard checkpoints may contain information about client connections, transactions, and the external network state.
-This information may not be valid when the checkpoint is applied.
-Additionally, if a checkpoint is taken during an application crash, restoring that checkpoint will be in the middle of that crash.
+Das Vorhandensein einer Norm-Checkpoint für eine virtuelle Maschine kann die Datenträgerleistung des virtuellen Computers auswirken.
+Wir empfehlen nicht mit Norm Prüfpunkte auf virtuellen Maschinen, wenn Leistung oder die Verfügbarkeit des Speicherplatzes wichtig ist.
 
-The presence of a standard checkpoint for a virtual machine may impact the disk performance of the virtual machine.
-We do not recommend using standard checkpoints on virtual machines when performance or the availability of storage space is critical.
+Anwenden eines Checkpoints Produktion umfasst Offlinestatus das Gast-Betriebssystem gebootet.
+Dies bedeutet, dass kein Staat oder Sicherheit Anwendungsinformationen als Teil der Checkpoint-Prozess erfasst wird.
 
-Applying a production checkpoint involves booting the guest operating system from an offline state.
-This means that no application state or security information is captured as part of the checkpoint process.
+Die folgende Tabelle zeigt wann Produktion Prüfpunkte oder Norm Kontrollstellen, je nach Zustand des virtuellen Computers zu verwenden.
 
-The following table shows when to use production checkpoints or standard checkpoints, depending on the state of the virtual machine.
-
-| **Virtual Machine State**| **Production Checkpoint**| **Standard Checkpoint**|
+| **Zustand der virtuellen Maschine**| **Produktion-Checkpoint**| **Norm-Checkpoint**|
 |:-----|:-----|:-----|
-| **Running with Integration Services**| Yes| Yes|
-| **Running without Integration Services**| No| Yes|
-| **Offline - no saved state**| Yes| Yes|
-| **Offline - with saved state**| No| Yes|
-| **Paused**| No| Yes|
-To see the difference between Standard and Production checkpoints, look at the [checkpoints walkthrough](../quick_start/walkthrough_checkpoints.md).
+| **Ausführen von Integration Services**| Ja| Ja|
+| **Ohne Integrationsservices ausführen**| Nicht| Ja|
+| **Offline - keine gespeicherten Zustand**| Ja| Ja|
+| **Offline - mit gespeicherten Zustand**| Nicht| Ja|
+| **Angehalten**| Nicht| Ja|
+Um den Unterschied zwischen Standard- und Produktion Checkpoints zu sehen, betrachten Sie die [Prüfpunkte Exemplarische Vorgehensweise](../quick_start/walkthrough_checkpoints.md).
 
-##Set a default checkpoint type
+##Legen Sie einen Prüfpunkt Standardtyp
 
-1.  In **Hyper-V Manager**, right-click the name of the virtual machine, and click **Settings**.
-2.  In the **Management** section, select **Checkpoints**.
-3.  Select either production checkpoints or standard checkpoints.
-    If you choose production checkpoints, you can also specify whether the host should take a standard checkpoint if a production checkpoint cannot be taken.
-    If you clear this check box and a production checkpoint cannot be taken, no checkpoint will be selected.
-4.  If you want to change the location where the configuration files for the checkpoint are stored, change the path in the **Checkpoint File Location** section.
-5.  Click **Apply** to apply your changes.
-    If you are done, click **OK** to close the dialog box.
+1.  In **Hyper-V-Manager**, klicken Sie mit der rechten Maustaste auf den virtuellen Computer, und klicken Sie auf **Einstellungen**.
+2.  In der **Verwaltung** Abschnitt, wählen Sie **Prüfpunkte**.
+3.  Wählen Sie entweder Produktion Prüfpunkte oder Norm Prüfpunkte.
+    Wenn Sie Produktion Prüfpunkte wählen, können Sie auch angeben, ob der Host einen Norm Prüfpunkt ergreifen sollten, wenn ein Prüfpunkt Produktion nicht gefasst werden kann.
+    Wenn Sie dieses Kontrollkästchen deaktivieren und ein Checkpoint Produktion kann nicht genommen werden, wird kein Prüfpunkt ausgewählt.
+4.  Wenn Sie möchten den Speicherort zu ändern, in dem die Konfigurationsdateien für den Prüfpunkt gespeichert werden, ändern Sie den Pfad in der **Speicherort der Prüfpunkt-Datei** Abschnitt.
+5.  Klicken Sie auf **Gelten** um Ihre Änderungen zu übernehmen.
+    Wenn Sie fertig sind, klicken Sie auf **Okay** um das Dialogfeld zu schließen.
 
-The default behavior in Windows 10 for new virtual machines is to create production checkpoints with fallback to standard checkpoints
+Das Standardverhalten in Windows 10 für neue virtuelle Computer ist Produktion Kontrollpunkte mit Fallback auf Norm Prüfpunkte erstellt werden.
 
-##Create a checkpoint
+##Erstellen eines Checkpoints
 
-To create a checkpoint
+Um einen Checkpoint zu erstellen
 
-1.  In **Hyper-V Manager**, under **Virtual Machines**, select the virtual machine.
-2.  Right-click the name of the virtual machine, and then click **Checkpoint**.
-3.  When the process is complete, the checkpoint will appear under **Checkpoints** in the **Hyper-V Manager**.
+1.  In **Hyper-V-Manager**, unter **Virtuelle Maschinen**, wählen Sie die virtuelle Maschine.
+2.  Klicken Sie mit der rechten Maustaste auf den virtuellen Computer, und klicken Sie dann auf **Prüfpunkt**.
+3.  Wenn der Prozess abgeschlossen ist, erscheint der Prüfpunkt unter **Prüfpunkte** in der **Hyper-V-Manager**.
 
-##Apply a checkpoint
+##Anwenden eines Checkpoints
 
-If you want to revert your virtual machine to a previous point-in-time, you can apply an existing checkpoint.
+Wenn Sie Ihren virtuellen Computer zu einem früheren-Zeitpunkt wiederherstellen möchten, können Sie ein vorhandenes Checkpoint anwenden.
 
-1.  In **Hyper-V Manager**, under **Virtual Machines**, select the virtual machine.
-2.  In the Checkpoints section, right-click the checkpoint that you want to use and click **Apply**.
-3.  A dialog box appears with the following options: 
+1.  In **Hyper-V-Manager**, unter **Virtuelle Maschinen**, wählen Sie die virtuelle Maschine.
+2.  Im Abschnitt Checkpoints Maustaste dem Checkpoint, die Sie verwenden möchten und klicken Sie auf **Gelten**.
+3.  Es erscheint ein Dialogfenster mit den folgenden Optionen: 
 
 
 ```
@@ -90,47 +87,47 @@ If you want to revert your virtual machine to a previous point-in-time, you can 
 ```
 
 
-##Delete a checkpoint
+##Löschen eines Checkpoints
 
-To cleanly delete a checkpoint: 
+Um einen Checkpoint sauber zu löschen: 
 
-1.  In **Hyper-V Manager**, select the virtual machine.
-2.  In the **Checkpoints** section, right-click the checkpoint that you want to delete, and click Delete.
-    You can also delete a checkpoint and all subsequent checkpoints.
-    To do so, right-click the earliest checkpoint that you want to delete, and then click ****Delete Checkpoint** Subtree**.
-3.  You might be asked to verify that you want to delete the checkpoint.
-    Confirm that it is the correct checkpoint, and then click **Delete**.
-4.  The .avhdx and .vhdx files will merge, and when complete, the .avhdx file will be deleted from the file system.
+1.  In **Hyper-V-Manager**, wählen Sie die virtuelle Maschine.
+2.  In der **Prüfpunkte** Abschnitt, mit der rechten Maustaste des Prüfpunkts, den Sie löschen möchten, und klicken Sie auf Löschen.
+    Sie können auch einen Checkpoint und alle nachfolgenden Checkpoints löschen.
+    Dazu mit der rechten Maustaste des frühesten Prüfpunkts, den Sie verwenden möchten, löschen Sie, und klicken Sie dann auf **** Löschen Checkpoint** Unterstruktur **.
+3.  Sie möglicherweise aufgefordert, sicherzustellen, dass den Prüfpunkt löschen möchten.
+    Bestätigen Sie, dass es der richtige Checkpoint, und klicken Sie auf **Löschen**.
+4.  Die Dateien .avhdx und .vhdx Zusammenführen werden, und wenn Sie fertig sind, wird die .avhdx-Datei aus dem Dateisystem gelöscht werden.
 
-> **Tip:** You can use Windows Powershell to delete a checkpoint by using the **Remove-VMSnapshot** cmdlet.
+> **Tipp:** Verwenden Sie Windows Powershell einen Prüfpunkt löschen Sie mithilfe der **Entfernen-VMSnapshot** Cmdlet.
 > 
 
-Checkpoints are stored as .avhdx files in the same location as the .vhdx files for the virtual machine.
-You should not delete the .avhdx files directly.
+Prüfpunkte werden als .avhdx-Dateien in demselben Speicherort wie die .vhdx-Dateien für den virtuellen Computer gespeichert.
+Sie sollten die .avhdx-Dateien nicht direkt löschen.
 
-##Change where checkpoint settings and save state files are stored
+##Ändern wo Prüfpunkt Einstellungen und Speichern des Zustands Dateien werden gespeichert
 
-If the virtual machine has no checkpoints, you can change where the checkpoint configuration and saved state files are stored.
+Wenn die virtuelle Maschine keine Checkpoints verfügt, können Sie ändern, in dem die Prüfpunkt-Konfiguration und gespeicherten Zustand Dateien gespeichert werden.
 
-1.  In **Hyper-V Manager**, right-click the name of the virtual machine, and click **Settings**.
-2.  In the **Management** section, select **Checkpoints** or **Checkpoint File Location**.
-3.  In **Checkpoint File Location**, enter the path to the folder where you would like to store the files.
-4.  Click **Apply** to apply your changes.
-    If you are done, click **OK** to close the dialog box.
+1.  In **Hyper-V-Manager**, klicken Sie mit der rechten Maustaste auf den virtuellen Computer, und klicken Sie auf **Einstellungen**.
+2.  In der **Verwaltung** Abschnitt, wählen Sie **Prüfpunkte** oder **Speicherort der Prüfpunkt-Datei**.
+3.  In **Speicherort der Prüfpunkt-Datei**, geben Sie den Pfad zu dem Ordner, wo Sie die Dateien speichern möchten.
+4.  Klicken Sie auf **Gelten** um Ihre Änderungen zu übernehmen.
+    Wenn Sie fertig sind, klicken Sie auf **Okay** um das Dialogfeld zu schließen.
 
-The default location for storing checkpoint configuration files is: %systemroot%\ProgramData\Microsoft\Windows\Hyper-V\Snapshots.
+Der standardmäßige Speicherort zum Speichern der Konfiguration Prüfpunktdateien ist: % systemroot%\ProgramData\Microsoft\Windows\Hyper-V\Snapshots.
 
 
-##Rename a checkpoint
+##Umbenennen eines Checkpoints
 
-1.  In **Hyper-V Manager**, select the virtual machine.
-2.  Right-click the checkpoint, and then select **Rename**.
-3.  Enter in the new name for the checkpoint.
-    It must be less than 100 characters, and the field cannot be empty.
-4.  Click **ENTER** when you are done.
+1.  In **Hyper-V-Manager**, wählen Sie die virtuelle Maschine.
+2.  Maustaste auf dem Checkpoint, und wählen Sie dann **Benennen Sie**.
+3.  Geben Sie den neuen Namen für den Prüfpunkt.
+    Es muss weniger als 100 Zeichen, und das Feld darf nicht leer sein.
+4.  Klicken Sie auf **GEBEN SIE** Wenn Sie fertig sind.
 
-By default, the name of a checkpoint is the name of the virtual machine combined with the date and time the checkpoint was taken.
-This is the standard format:
+Standardmäßig ist der Name von einem Checkpoint der Name der virtuellen Maschine kombiniert mit Datum und Uhrzeit, die der Prüfpunkt getroffen wurde.
+Dies ist das standard-Format:
 
 
 ```
@@ -138,9 +135,6 @@ virtual_machine_name (MM/DD/YYY –hh:mm:ss AM\PM)
 
 ```
 
-Names are limited to 100 characters or less, and the name cannot be blank.
-
-
-and the name cannot be blank. 
+Namen sind auf 100 Zeichen oder weniger beschränkt, und der Name darf nicht leer sein.
 
 

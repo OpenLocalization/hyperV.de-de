@@ -1,26 +1,23 @@
-ms.ContentId: e586a11a-870f-403b-8af8-4c2931589d26
-title: Manage Windows with PowerShell Direct 
+#Verwalten von Windows PowerShell direkten
 
-#Manage Windows with PowerShell Direct
+PowerShell-Direct können Sie die Remoteverwaltung eines Windows 10 oder virtuelle Maschine Windows Server Technical Preview von einem Windows 10 oder Windows Server technische Vorschau Hyper-V-Host.
+PowerShell-Direct ermöglicht PowerShell Management innerhalb eines Virtual machine unabhängig von der Netzwerkkonfiguration oder remote-Management-Einstellungen auf entweder die Hyper-V-Host oder der virtuellen Maschine.
+Dies erleichtert für Hyper-V-Administratoren automatisieren und script-Virtual Machine-Management und Konfiguration.
 
-You can use PowerShell Direct to remotely manage a Windows 10 or Windows Server Technical Preview virtual machine from a Windows 10 or Windows Server Technical Preview Hyper-V host.
-PowerShell Direct allows PowerShell management inside a virtual machine regardless of the network configuration or remote management settings on either the Hyper-V host or the virtual machine.
-This makes it easier for Hyper-V Administrators to automate and script virtual machine management and configuration.
+Es gibt zwei Möglichkeiten zum Ausführen von PowerShell-Direct:  
 
-There are two ways to run PowerShell Direct:  
+*   Erstellen Sie und beenden Sie eine Sitzung des PowerShell-Direct mit PSSession cmdlets
+*   Run-Skript oder mit dem Cmdlet Invoke-Command Befehl
 
-*   Create and exit a PowerShell Direct session using PSSession cmdlets
-*   Run script or command with the Invoke-Command cmdlet
+Wenn Sie ältere virtuelle Maschinen verwalten, verwenden Verbindung mit virtuellen Computern (VMConnect) oder [Konfigurieren eines virtuellen Netzwerks für die virtuelle Maschine](http://technet.microsoft.com/library/cc816585.aspx).
 
-If you're managing older virtual machines, use Virtual Machine Connection (VMConnect) or [configure a virtual network for the virtual machine](http://technet.microsoft.com/library/cc816585.aspx).
+##Erstellen Sie und beenden Sie eine Sitzung des PowerShell-Direct mit PSSession cmdlets
 
-##Create and exit a PowerShell Direct session using PSSession cmdlets
-
-1.  On the Hyper-V host, open Windows PowerShell as Administrator.
+1.  Öffnen Sie Windows PowerShell auf dem Hyper-V-Host als Verwalter.
 2.  Run the one of the following commands to create a session by using the virtual machine name or GUID:  
     ``` PowerShell
-    Enter-PSSession -VMName <VMName>
-    Enter-PSSession -VMGUID <VMGUID>
+    Enter-PSSession -VMName VMName
+    Enter-PSSession -VMGUID VMGUID
 
 
 ```
@@ -33,15 +30,15 @@ Exit-PSSession
 ```
 
 
-> Note:  If you're session won't connect, make sure you're using credentials for the virtual machine you're connecting to -- not the Hyper-V host.
+> Hinweis: Wenn Sie die Sitzung sind nicht anschließen, stellen Sie sicher Sie verwenden Anmeldeinformationen für den virtuellen Computer, die Sie an--nicht den Hyper-V-Host herstellen.
 > 
 
-To learn more about these cmdlets, see [Enter-PSSession](http://technet.microsoft.com/library/hh849707.aspx) and [Exit-PSSession](http://technet.microsoft.com/library/hh849743.aspx).
+Mehr über diese Cmdlets finden Sie unter [Geben Sie-PSSession](http://technet.microsoft.com/library/hh849707.aspx) und [Exit-PSSession](http://technet.microsoft.com/library/hh849743.aspx).
 
-##Run script or command with Invoke-Command cmdlet
+##Run-Skript oder mit dem Cmdlet Invoke-Command Befehl
 
-You can use the [Invoke-Command](http://technet.microsoft.com/library/hh849719.aspx) cmdlet to run a pre-determined set of commands on the virtual machine.
-Here is an example of how you can use the Invoke-Command cmdlet where PSTest is the virtual machine name and the script to run (foo.ps1) is in the script folder on the C:/ drive:
+Können Sie die [Invoke-Command](http://technet.microsoft.com/library/hh849719.aspx) Cmdlet einen vordefinierten Satz von Befehlen auf dem virtuellen Computer ausgeführt.
+Hier ist ein Beispiel für die Verwendung von des Cmdlets Invoke-Command wobei PSTest Name der virtuellen Maschine und das Skript (foo.ps1) ausgeführt wird, auf Laufwerk C: im Ordner Skript / drive:
 
  ``` PowerShell
  Invoke-Command -VMName PSTest -FilePath C:\script\foo.ps1 
@@ -57,20 +54,20 @@ To run a single command, use the **-ScriptBlock** parameter:
  ```
 
 
-##What's required to use PowerShell Direct?
+##Was ist erforderlich, um PowerShell direkt verwenden?
 
-To create a PowerShell Direct session on a virtual machine,
+Eine direkte PowerShell-Sitzung auf einem virtuellen Computer zu erstellen,
 
-*   The virtual machine must be running locally on the host and booted.
-*   You must be logged into the host computer as a Hyper-V administrator.
-*   You must supply valid user credentials for the virtual machine.
-*   The host operating system must run Windows 10, Windows Server Technical Preview, or a higher version.
-*   The virtual machine must run Windows 10, Windows Server Technical Preview, or a higher version.
+*   Die virtuelle Maschine muss lokal auf dem Host ausgeführt werden und gebootet.
+*   Sie müssen in den Hostcomputer als Hyper-V-Administrator angemeldet sein.
+*   Sie müssen gültige Benutzeranmeldeinformationen für die virtuelle Maschine angeben.
+*   Das Host-Betriebssystem muss Windows 10 Windows Server Technical Preview oder eine höhere Version ausgeführt.
+*   Der virtuelle Computer muss Windows 10 Windows Server Technical Preview oder eine höhere Version ausgeführt.
 
-You can use the [Get-VM](http://technet.microsoft.com/library/hh848479.aspx) cmdlet to check that the credentials you're using have the Hyper-V administrator role and to see which VMs are running locally on the host and booted.
+Können Sie die [Get-VM](http://technet.microsoft.com/library/hh848479.aspx) Cmdlet überprüfen, ob die Anmeldeinformationen, die Sie verwenden die Hyper-V-Administratorrolle haben und sehen die VMs werden lokal auf dem Host ausgeführt und gebootet.
 
-##What can you do with PowerShell Direct?
+##Was können Sie mit PowerShell-Direct?
 
-See [PowerShell Direct snippets](../develop/powershell_snippets.md) for numerous examples of how to use PowerShell Direct in your environment as well as tips and tricks for writing Hyper-V scripts with PowerShell.
+Finden Sie unter [PowerShell-Direct-Ausschnitte](../develop/powershell_snippets.md) zahlreiche Beispiele der Verwendung PowerShell direkt in Ihrer Umgebung sowie Tipps und Tricks für Hyper-V-Skripten mit PowerShell.
 
 

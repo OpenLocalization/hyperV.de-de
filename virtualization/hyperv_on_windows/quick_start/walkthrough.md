@@ -1,25 +1,22 @@
-ms.ContentId: 248565F7-5EE6-46C6-B29E-8F1D44658563
-title: Walktrough Overview
+#Exemplarische Vorgehensweise Hyper-V auf Windows 10
 
-#Walkthrough Hyper-V on Windows 10
+Diese Themen helfen Ihrem Get mit Hyper-V auf Windows 10 kennen.
+Wir führen Sie durch alle Schritte, um einen Computer aufstehen und laufen mit Hyper-V und schauen Sie sich einige der neuen Features und alte Favoriten.
 
-These topics will help your get acquainted with Hyper-V on Windows 10.
-We'll walk you through all of the steps needed to get a computer up and running with Hyper-V and check out some of the new features and old favorites.
+[Schritt 1: Stellen Sie sicher, dass Ihre Maschine kompatibel ist](walkthrough_compatibility.md)
 
-[Step 1: Make sure your machine is compatible](walkthrough_compatibility.md)
+[Schritt 2: Installieren von Hyper-V unter Windows 10](walkthrough_install.md)
 
-[Step 2: Install Hyper-V on Windows 10](walkthrough_install.md)
+[Schritt 3: Erstellen Sie einen virtuellen switch](walkthrough_virtual_switch.md)
 
-[Step 3: Create a virtual switch](walkthrough_virtual_switch.md)
+[Schritt 4: Erstellen einer virtuellen Windows-Maschine aus einer .iso-Datei](walkthrough_create_vm.md)
 
-[Step 4: Create a Windows virtual machine from an .iso file](walkthrough_create_vm.md)
+[Schritt 5: Verbinden Sie mit dem virtuellen Computer und schließen die Installation ab](walkthrough_vmconnect.md)
 
-[Step 5: Connect to the virtual machine and finish the installation](walkthrough_vmconnect.md)
+[Schritt 6: Experiment mit checkpoints](walkthrough_checkpoints.md)
 
-[Step 6: Experiment with checkpoints](walkthrough_checkpoints.md)
+[Schritt 7: Exportieren Sie und importieren Sie eine virtuelle Maschine](walkthrough_export_import.md)
 
-[Step 7: Export and import a virtual machine](walkthrough_export_import.md)
-
-[Step 8: Experiment with Windows Powershell](walkthrough_powershell.md)
+[Schritt 8: Experimentieren Sie mit Windows Powershell](walkthrough_powershell.md)
 
 

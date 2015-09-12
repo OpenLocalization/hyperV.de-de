@@ -1,50 +1,46 @@
-ms.ContentId: 178899C9-8EA6-4D82-A0B0-8BE4DDD78DAE
-title: Step 5: Connect to the virtual machine and finish the installation
+#Schritt 5: Verbinden Sie mit dem virtuellen Computer und schließen die Installation ab
 
-#Step 5: Connect to the virtual machine and finish the installation
+Um Ihre virtuelle Maschine Gebäude zu beenden, müssen Sie die VM zu starten und zu Fuß durch die Installation des Betriebssystems.
 
-In order to finish building your virtual machine, you need to start the VM and walk through the operating system installation.
+##Verbinden Sie mit der VM
 
-##Connect to the VM
+1.  In **Hyper-V-Manager**, doppelklicken Sie auf die virtuelle Maschine.
+    Dadurch wird das VMConnect-Tool gestartet.
+2.  VMConnect klicken Sie auf die grüne **Start** Schaltfläche " !(media/start.png).
+    Dies ist wie das schlagen der Power-Taste auf einem physischen Computer.
+3.  Die VM wird Setup starten und Sie können Fuß durch die Installation, wie Sie auf einem physischen Computer.
 
-1.  In **Hyper-V Manager**, double-click on the virtual machine.
-    This will launch the VMConnect tool.
-2.  In VMConnect, click on the green **Start** button !(media/start.png).
-    This is like hitting the power button on a physical computer.
-3.  The VM will boot into setup and you can walk through the installation like you would on a physical computer.
-
-> **Note:** Unless you're running a volume licensed version of Windows 10, you do need a seperate license for Windows running inside a virtual machine.
-> The virtual machine's operating system is completely independent of the host operating system.
+> **Hinweis:** Sofern Sie eine volumenlizenzierte Version von Windows 10 ausführen, benötigen Sie eine separate Lizenz für Windows in einer virtuellen Maschine laufen.
+> Betriebssystem des virtuellen Computers ist unabhängig von der Host-Betriebssystem.
 > 
 
-##Other stuff you can do in VMConnect
+##Andere Sachen, die Sie, in VMConnect tun können
 
-Here are all of the buttons and shortcut keys, mapped to what they do.
+Hier sind alle Schaltflächen und Tastenkombinationen zugeordnet, was sie tun.
 
-| **To do this…**| Click this...| **Or, do this…**| |
+| **Um dies zu tun...**| Klicken Sie hier...| **Oder tun dies...**| |
 | ----- | ----- | ----- | ----- |
-| Start the virtual machine| !(media/start.png)| CTRL+S| |
-| Turn off the VM| !(media/turnoff.png)| | |
-| Shut down a VM| !(media/shutdown.png)| | |
-| Save| !(media/save.png)| | |
-| Pause| !(media/pause.png)| | |
-| Reset| !(media/reset.png)| | |
-| Mouse release| !(media/ctrlaltdel.png)| CTRL+ALT+LEFT arrow| |
-| Send CTRL+ALT+DELETE to the virtual machine| | CTRL+ALT+END| |
-| Switch from full-screen mode back to windowed mode| | CTRL+ALT+BREAK| |
-| Use enhanced session mode| !(media/basic.png)| | |
-| Open the settings for the virtual machine| | CTRL+O| |
-| Create a checkpoint| !(media/checkpoint.png)| CTRL+N or select **Action** > **Checkpoint**| |
-| Revert to a checkpoint| !(media/revert.png)| CTRL+E| |
-| Do a screen capture| | CTRL+C| |
-| Return mouse clicks or keyboard input to the physical computer| | Press CTRL+ALT+LEFT arrow and then move the mouse pointer outside of the virtual machine window.This is the **mouse release key combination** and it can be changed in the **Hyper-V settings** in **Hyper-V Manager**.| |
-| Send mouse clicks or keyboard input to the virtual machine| | Click anywhere in the virtual machine window.The mouse pointer may appear as a small dot when you connect to a running virtual machine.| |
-| Change the settings of the virtual machine| | Select **File** > **Settings**.| |
-| Connect to a DVD image (.iso file) or a virtual floppy disk (.vfd file)| | Click **Media** on the menu.Virtual floppy disks are not supported for generation 2 virtual machines.| |
+| Starten Sie die virtuelle Maschine| !(media/start.png)| STRG + S| |
+| Deaktivieren Sie die VM| !(media/turnoff.png)| | |
+| Eine VM heruntergefahren| !(media/shutdown.png)| | |
+| Sie sparen| !(media/save.png)| | |
+| Anhalten| !(media/pause.png)| | |
+| Zurücksetzen| !(media/reset.png)| | |
+| Maus-Version| !(media/ctrlaltdel.png)| STRG + ALT + Pfeil links| |
+| Senden von STRG + ALT + ENTF auf der virtuellen Maschine| | STRG + ALT + ENDE| |
+| Vom Vollbildmodus in den Fenstermodus wechseln| | STRG + ALT + UNTBR| |
+| Erweiterte Sitzung-Modus verwenden| !(media/basic.png)| | |
+| Öffnen Sie die Einstellungen für den virtuellen Computer| | STRG + O| |
+| Erstellen eines Checkpoints| !(media/checkpoint.png)| STRG + N oder auswählen **Aktion** > **Prüfpunkt**| |
+| An einem Prüfpunkt wiederherstellen| !(media/revert.png)| STRG + E| |
+| Machen Sie einen Screenshot| | STRG + C| |
+| Zurückgeben Sie Mausklicks oder Tastatureingaben auf dem physikalischen computer| | Drücken Sie STRG + ALT + nach-links-Taste und bewegen Sie den Mauszeiger dann Fenster des virtuellen Computers.Dies ist die **Maus-Freigabe-Tastenkombination** und es kann geändert werden, der **Hyper-V-Einstellungen** in **Hyper-V-Manager**.| |
+| Mausklicks oder Tastatureingaben an die virtuelle Maschine zu senden| | Klicken Sie im Fenster virtuellen Computers.Der Mauszeiger kann als ein kleiner Punkt angezeigt, wenn Sie mit einer laufenden virtuellen Maschine verbinden.| |
+| Ändern Sie die Einstellungen des virtuellen Computers| | Wählen Sie **Datei** > **Einstellungen**.| |
+| Schließen Sie ein DVD-Image (.iso-Datei) oder eine virtuelle Diskette (VFD-Datei)| | Klicken Sie auf **Media** auf der Speisekarte.Virtuelle Disketten werden nicht für Generation 2 virtuelle Maschinen unterstützt.| |
 
-##Next Step:
+##Nächster Schritt:
 
-[Step 6: Experiment with checkpoints](walkthrough_checkpoints.md)
+[Schritt 6: Experiment mit checkpoints](walkthrough_checkpoints.md)
 
 
-th checkpoints](walkthrough_checkpoints.md)
