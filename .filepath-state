@@ -15,6 +15,7 @@
     "virtualization\\hyperv_on_windows\\about\\supported_guest_os.md"
   ],
   "0f9464f2f6084b3aa09bab39562c5a6644f2b26e": [
+    "virtualization\\hyperv_on_windows\\about\\whats_new - Copy.md",
     "virtualization\\hyperv_on_windows\\about\\whats_new.md"
   ],
   "175fe300a03c01dfc6e8e1d2cf000e8612a7bec4": [
@@ -179,7 +180,7 @@
   "66caa4c366c1b65937a913bfb39e3af350c2d9f6": [
     "virtualization\\hyperv_on_windows\\quick_start\\media\\revert.png"
   ],
-  "9c6055c808ae6fdcf4578005b6f17fb5f15e436d": [
+  "e76be9872037c93cdc624b402ba24db502b1b9cd": [
     "virtualization\\hyperv_on_windows\\TOC.md"
   ],
   "15ca83a671c5bc684c7d4c7634b537c068af3643": [
@@ -215,8 +216,11 @@
   "8038edc8eac0a017e688401c61e5a78787f26bd6": [
     "virtualization\\hyperv_on_windows\\user_guide\\vmsession.md"
   ],
-  "611effb7bd43ced37ba7d4344008e0c03d52c02d": [
-    "virtualization\\hyperv_on_windows\\windows_welcome.md"
+  "6b7b54605799f6cdf15826bf05db4e9b259dcb4e": [
+    "virtualization\\hyperv_on_windows\\windows_welcome5.md"
+  ],
+  "25d1c62700c68cbf988d877fbdc7382fc536a461": [
+    "virtualization\\hyperv_on_windows\\media\\5.png"
   ],
   "1cd230752f52bb9786821493df48c8a5a2a2f903": [
     "virtualization\\windowscontainers\\about\\about_overview.md"
