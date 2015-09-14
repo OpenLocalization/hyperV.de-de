@@ -216,11 +216,13 @@
     "virtualization\\hyperv_on_windows\\user_guide\\vmsession.md"
   ],
   "22cf6e6e5ec7c30eeec6a095cdf83cc7dbb97f73": [
-    "virtualization\\hyperv_on_windows\\windows_welcome7 - Copy.md",
-    "virtualization\\hyperv_on_windows\\windows_welcome7.md"
+    "virtualization\\hyperv_on_windows\\windows_welcome7 - Copy.md"
   ],
   "f72ccccc32e84099d579c12390d1f223a122e366": [
     "virtualization\\hyperv_on_windows\\media\\7.png"
+  ],
+  "916c40126476783d2a30dce564e9f6b64b8d442c": [
+    "virtualization\\hyperv_on_windows\\windows_welcome7.md"
   ],
   "1cd230752f52bb9786821493df48c8a5a2a2f903": [
     "virtualization\\windowscontainers\\about\\about_overview.md"
