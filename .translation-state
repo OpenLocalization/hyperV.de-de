@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "f02e1649a3e03fe8207eb98a2c14967cbebcebf9",
+  "LastProcessedCommit": "d431a95b27020a2d51fc98e7baaf945becaec4e6",
   "Items": {
     "08796bf856b1936c65df41076765d9f33d79e268": {
       "SourceFileCommit": "fdfa8efee03f92d2e23fcd07a362b50a2cdbe054",
@@ -904,23 +904,30 @@
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"
     },
-    "9c6055c808ae6fdcf4578005b6f17fb5f15e436d": {
-      "SourceFileCommit": "ea122cddff6b101b507f4168cfe2e3a75f7af836",
+    "cb8ab4d1d2a32a7f914d5c394ec119c481c73878": {
+      "SourceFileCommit": "a2840ea03a59bc0d0d7e92c71bc7472b823f2635",
+      "SourceFilePath": "virtualization\\hyperv_on_windows\\about\\hyperv_on_windows_new.md",
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "UpdatedDateTime": "0001-01-01T00:00:00"
+    },
+    "f50cd6ad76b1f3de0883d5751ed564ca668a55ad": {
+      "SourceFileCommit": "d431a95b27020a2d51fc98e7baaf945becaec4e6",
       "SourceFilePath": "virtualization\\hyperv_on_windows\\TOC.md",
       "TargetFileCommit": null,
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"
     },
-    "611effb7bd43ced37ba7d4344008e0c03d52c02d": {
-      "SourceFileCommit": "ea122cddff6b101b507f4168cfe2e3a75f7af836",
-      "SourceFilePath": "virtualization\\hyperv_on_windows\\windows_welcome.md",
+    "ba8ea9aaf23f997ee956d6efc01ed2a61cfd261c": {
+      "SourceFileCommit": "d431a95b27020a2d51fc98e7baaf945becaec4e6",
+      "SourceFilePath": "virtualization\\hyperv_on_windows\\windows_welcome3 - Copy.md",
       "TargetFileCommit": null,
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"
     },
-    "cb8ab4d1d2a32a7f914d5c394ec119c481c73878": {
-      "SourceFileCommit": "a2840ea03a59bc0d0d7e92c71bc7472b823f2635",
-      "SourceFilePath": "virtualization\\hyperv_on_windows\\about\\hyperv_on_windows_new.md",
+    "ab8972465a113bbea903ec2c026e16a1d562077c": {
+      "SourceFileCommit": "d431a95b27020a2d51fc98e7baaf945becaec4e6",
+      "SourceFilePath": "virtualization\\hyperv_on_windows\\media\\3.png",
       "TargetFileCommit": null,
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"
