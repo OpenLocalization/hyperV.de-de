@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "efda18f297427c5cef0e1b8c8ee725c532364bf4",
+  "LastProcessedCommit": "87aabf7a228687548635c26e1efb7949ff0f632a",
   "Items": {
     "08796bf856b1936c65df41076765d9f33d79e268": {
       "SourceFileCommit": "fdfa8efee03f92d2e23fcd07a362b50a2cdbe054",
@@ -911,23 +911,16 @@
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"
     },
-    "b1819aae374568c2fe478785ffe012624f72d1a2": {
-      "SourceFileCommit": "efda18f297427c5cef0e1b8c8ee725c532364bf4",
+    "9c6055c808ae6fdcf4578005b6f17fb5f15e436d": {
+      "SourceFileCommit": "87aabf7a228687548635c26e1efb7949ff0f632a",
       "SourceFilePath": "virtualization\\hyperv_on_windows\\TOC.md",
       "TargetFileCommit": null,
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"
     },
-    "ee42140c4ef5e52eff9528a50f790ee0564cd71a": {
-      "SourceFileCommit": "efda18f297427c5cef0e1b8c8ee725c532364bf4",
-      "SourceFilePath": "virtualization\\hyperv_on_windows\\windows_welcome_third - Copy.md",
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "UpdatedDateTime": "0001-01-01T00:00:00"
-    },
-    "ac205e0bd156c88bc9a5d23d6fe346985ce08f2a": {
-      "SourceFileCommit": "efda18f297427c5cef0e1b8c8ee725c532364bf4",
-      "SourceFilePath": "virtualization\\hyperv_on_windows\\media\\3.png",
+    "611effb7bd43ced37ba7d4344008e0c03d52c02d": {
+      "SourceFileCommit": "87aabf7a228687548635c26e1efb7949ff0f632a",
+      "SourceFilePath": "virtualization\\hyperv_on_windows\\windows_welcome.md",
       "TargetFileCommit": null,
       "TargetFilePath": null,
       "UpdatedDateTime": "0001-01-01T00:00:00"
